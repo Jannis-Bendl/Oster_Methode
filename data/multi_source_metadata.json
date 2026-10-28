@@ -1,0 +1,45 @@
+{
+  "retrieved_at_utc": "2026-10-19T11:32:58.261810+00:00",
+  "target_doi": "10.1080/07350015.2016.1227711",
+  "target_title": "Unobservable Selection and Coefficient Stability: Theory and Evidence",
+  "start_year": 2021,
+  "end_year": 2026,
+  "journals": [
+    "American Economic Review",
+    "Quarterly Journal of Economics",
+    "Journal of Political Economy",
+    "Econometrica",
+    "Review of Economic Studies",
+    "American Economic Journal: Applied Economics",
+    "American Economic Journal: Economic Policy",
+    "American Economic Journal: Macroeconomics",
+    "American Economic Journal: Microeconomics"
+  ],
+  "openalex_journal_ids": {
+    "American Economic Review": "S23254222",
+    "Quarterly Journal of Economics": "S203860005",
+    "Journal of Political Economy": "S95323914",
+    "Econometrica": "S95464858",
+    "Review of Economic Studies": "S88935262",
+    "American Economic Journal: Applied Economics": "S42893225",
+    "American Economic Journal: Economic Policy": "S158011328",
+    "American Economic Journal: Macroeconomics": "S170166683",
+    "American Economic Journal: Microeconomics": "S96919139"
+  },
+  "openalex_api_filter": "cites:W2465587637,publication_year:2021-2026,primary_location.source.id:S23254222|S203860005|S95323914|S95464858|S88935262|S42893225|S158011328|S170166683|S96919139",
+  "openalex_reported_count": 68,
+  "openalex_filtered_records": 68,
+  "semantic_scholar_target_id": null,
+  "semantic_scholar_reported_count": null,
+  "semantic_scholar_filtered_records": 0,
+  "semantic_scholar_error": "429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080%2F07350015.2016.1227711?fields=paperId%2Ctitle%2Cyear%2CexternalIds",
+  "combined_records_before_deduplication": 68,
+  "combined_unique_records": 68,
+  "deduplication": "Normalized DOI; otherwise normalized title + year; title alone if year is missing",
+  "semantic_scholar_api_key_configured": false,
+  "outputs": [
+    "C:\\Users\\jabef\\Desktop\\FU Job\\Prof.Marcus\\Python_Scraper\\literature_review_oster\\data\\multi_source_papers.csv",
+    "C:\\Users\\jabef\\Desktop\\FU Job\\Prof.Marcus\\Python_Scraper\\literature_review_oster\\data\\source_comparison.csv",
+    "C:\\Users\\jabef\\Desktop\\FU Job\\Prof.Marcus\\Python_Scraper\\literature_review_oster\\data\\multi_source_metadata.json"
+  ]
+}
