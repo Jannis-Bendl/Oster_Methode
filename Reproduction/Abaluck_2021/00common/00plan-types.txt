@@ -1,0 +1,25 @@
+new_type,broad_type
+1876 Cost,COST
+Continuing Care Retirement Community,OTHER
+Cost,COST
+Cost *,COST
+Demo,DEMO
+Demo *,DEMO
+ESRD II,OTHER
+HMO,HMO
+HMOPOS,HMO
+Local HMO,HMO
+Local HMO *,HMO
+Local PPO,PPO
+Local PPO *,PPO
+MSA *,OTHER
+MSA Demo *,DEMO
+Medicare Prescription Drug Plan,PDP
+Medicare-Medicaid Plan HMO,DUAL
+National PACE,PACE
+PFFS,PFFS
+PFFS *,PFFS
+PSO (State License),OTHER
+RFB PFFS,PFFS
+Regional PPO,PPO
+Regional PPO *,PPO

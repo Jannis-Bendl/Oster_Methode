@@ -1,0 +1,20 @@
+*.log
+*.dta
+**/data
+*.bak
+*.out
+*.gph
+
+# LaTeX
+*.fls
+*.toc
+*.aux
+*.syntex.gz
+
+# IDE/Vim
+*.vim
+*.vimrc
+$MYVIMRC
+
+*.png
+*figureA1_term_map*

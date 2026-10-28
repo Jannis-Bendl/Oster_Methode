@@ -1,0 +1,275 @@
+% ---------------------------------------------------------------------
+\documentclass{article}
+
+\usepackage{nberpreamble}
+\title{\bfseries Plots Merge}
+\author{\sffamily Prepared by Mauricio C\'aceres Bravo}
+\date{\sffamily \today}
+
+% ---------------------------------------------------------------------
+\begin{document}
+\displayoptions
+\clearpage
+
+% ---------------------------------------------------------------------
+\section{What are we plotting?}
+\label{sec:what_are_we_plotting_}
+
+We aim to segment the data into 4 groups:
+\begin{enumerate}
+  \item Plan had above/below median alpha
+  \item Plan was terminated or not-terminated
+\end{enumerate}
+
+Within a given year, each group assigned to a beneficiary will be
+unique.  However, a beneficiary may change plans across years for
+various reasons: If their plan terminates they would be forced into a
+new plan, or if they move they would chanage plans by definition (since
+we have determined that the "same" plan is different in different
+counties).
+
+Even if their plan does not terminate and they do not move, they may
+appear with a new plan the next year. Hence this definition is not
+unique across years. Since we want to compare a \textbf{\textit{cohort}}
+of people, when we make the plots we fix a year, call it $t$, and we
+segment the sample using plan alphas and terminations from year $t - 1$
+using a single year of data. Hence we have a single data point per
+beneficiary which indicates which of the 4 groups they belong to:
+\begin{enumerate}[label=Group \arabic*:, leftmargin = 6em]
+  \item Above median, non-terminated
+  \item Above median, terminated
+  \item Below median, non-terminated
+  \item Below median, terminated
+\end{enumerate}
+
+We merge this single year of data into every other year, giving us a
+way to track the cohort over time that is consistent. The resulting
+plot will look like this:
+\begin{figure}[!ht]
+  \centering
+  \caption{Average Plan Effects Over Time}
+  \label{fig:average_plan_effects_over_time}
+  \begin{tikzpicture}
+    \begin{axis}[name=plot1
+      %,title=
+      ,width=15cm
+      ,height=9cm
+      ,ymin=-.6
+      ,ymax=.8
+      ,xmin=0
+      ,xmax=2
+      ,domain=0:2
+      ,ylabel=Average Plan Effects
+      ,y label style={
+        at = {(axis description cs:-0.150,0.5)},
+        rotate = 90
+      }
+      %,xlabel=$x$
+      ,yticklabels = {-0.005,-0.003,-0.001,0.001,0.003,0.005}
+      ,ytick       = {-0.5,-0.3,-0.1,0.1,0.3,0.5}
+      ,xticklabels = {,,}
+      ,xtick       = {0.05,1.95}
+      ,every tick/.style = {
+        black,
+        semithick,
+      }
+    ]
+    \draw [-, line width = 1.25pt, color=MaterialBlue300, dashed]
+      (axis cs:0.05, 0.3) -- (axis cs:1.95, 0.2);
+    \draw [-, line width = 1.25pt, color=MaterialBlue900]
+      (axis cs:0.05, 0.275) -- (axis cs:1.95, -0.1);
+
+    \draw [-, line width = 1.25pt, color=MaterialRed300, dashed]
+      (axis cs:0.05, -0.5) -- (axis cs:1.95, -0.45);
+    \draw [-, line width = 1.25pt, color=MaterialRed900]
+      (axis cs:0.05, -0.55) -- (axis cs:1.95, -0.12);
+
+    \node[above] at (axis cs:0.1, 0) {$t - 1$};
+    \node[above] at (axis cs:1.95, 0) {$t$};
+
+    % legend
+    \draw [-, line width = 1.25pt, color=MaterialBlue300, dashed]
+      (axis cs:1, 0.7) -- (axis cs:1.1, 0.7);
+      \node[right] at (axis cs:1.1, 0.7) {Above median, non-terminated};
+    \draw [-, line width = 1.25pt, color=MaterialBlue900]
+      (axis cs:1, 0.6) -- (axis cs:1.1, 0.6);
+      \node[right] at (axis cs:1.1, 0.6) {Above median, terminated};
+
+    \draw [-, line width = 1.25pt, color=MaterialRed300, dashed]
+      (axis cs:1, 0.5) -- (axis cs:1.1, 0.5);
+      \node[right] at (axis cs:1.1, 0.5) {Below median, non-terminated};
+    \draw [-, line width = 1.25pt, color=MaterialRed900]
+      (axis cs:1, 0.4) -- (axis cs:1.1, 0.4);
+      \node[right] at (axis cs:1.1, 0.4) {Below median, terminated};
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+
+With each line representing the average plan effect in the indicated
+year using the cohort groups for year $t$, which were defined using $t - 1$
+variables.
+
+% ---------------------------------------------------------------------
+\section{Plots version 1 (``old'')}
+\label{sec:plots_version_1_old_}
+
+For a given beneficiary, we have the following:
+\begin{table}[H]
+  \centering
+  \caption{Example of Data for Beneficiary 1}
+  \label{tab:example_of_data_for_beneficiary_1}
+  \begin{tabular}{cccccc}
+  \toprule
+  \verb`bene` & \verb`year` & \verb`plan` & \verb`ma` & \verb`term` & \verb`above median` \\
+  \midrule
+  1 & 2006 & 1 & 1 & 0 & 0 \\
+  1 & 2007 & 1 & 1 & 0 & 1 \\
+  1 & 2008 & 2 & 0 & 0 & 1 \\
+  1 & 2009 & 2 & 0 & 0 & 0 \\
+  1 & 2010 & 1 & 1 & 1 & 0 \\
+  1 & 2011 & 2 & 0 & 0 & 1 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+For simplicity in this example, we write ``plan'' when we mean
+county-plan, and we will consider a single year of data: 2011, which is
+the year with the most terminations. Since 2011 is the reference year,
+that is, $t = 2011$, the plan we care about is the $t - 1 = 2010$ plan,
+which is plan \#1. Note that it does not matter that the 2011 plan is
+no longer an MA plan, and that the beneficiary was not enrolled in an
+MA plan in 2009. We only care about the $t - 1 = 2010$ data to assign
+a group to this beneficiary, which in this case is ``Terminated, Below
+Median'':  Group 4.
+
+In general, for reference year 2011 we have 2010 data
+\begin{table}[H]
+  \centering
+  \caption{Assigning Groups for Reference Year 2011}
+  \label{tab:assigning_groups_for_reference_year_2011}
+  \begin{tabular}{ccccccc}
+  \toprule
+  \verb`bene` & \verb`year` & \verb`plan` & \verb`ma` & \verb`term` & \verb`above median` & \verb`group` \\
+  \midrule
+  1 & 2010 & 1 & 1 & 1 & 0 & 4 \\
+  2 & 2010 & 2 & 0 & 0 & . & . \\
+  3 & 2010 & 3 & 1 & 1 & 0 & 4 \\
+  4 & 2010 & 4 & 0 & 1 & . & . \\
+  5 & 2010 & 5 & 1 & 1 & 0 & 4 \\
+  6 & 2010 & 6 & 1 & 1 & 1 & 2 \\
+  7 & 2010 & 7 & 1 & 0 & 0 & 3 \\
+  8 & 2010 & 8 & 1 & 0 & 1 & 1 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+Note that non-MA plans are dropped, regardless of terminated status.
+So they would neither be assigned an above/below median indicator nor
+a group for the plots. To produce the $t - 1, t$ time series plots, we
+would keep only \verb`bene` and \verb`group` from this data and merge by
+\verb`bene` onto the main data, as illustrated in the following table
+(note that group is time-invariant, even as other variables change):
+\begin{table}[H]
+  \centering
+  \caption{Merge in Group Assignments for Reference Year 2011}
+  \label{tab:merge_in_group_assignments_for_reference_year_2011}
+  \begin{tabular}{ccccccc}
+  \toprule
+    \verb`bene` & \verb`year` & \verb`plan` & \verb`ma` & \verb`term` & \verb`above median` & \verb`group` \\
+    \midrule
+    1 & 2010 & 1 & 1 & 1 & 0 & 4 \\
+    2 & 2010 & 2 & 0 & 0 & . & . \\
+    3 & 2010 & 3 & 1 & 1 & 0 & 4 \\
+    4 & 2010 & 4 & 0 & 1 & . & . \\
+    5 & 2010 & 5 & 1 & 1 & 0 & 4 \\
+    6 & 2010 & 6 & 1 & 1 & 1 & 2 \\
+    7 & 2010 & 7 & 1 & 0 & 0 & 3 \\
+    8 & 2010 & 8 & 1 & 0 & 1 & 1 \\
+    \midrule
+    1 & 2011 & 2 & 0 & 0 & . & 4 \\
+    2 & 2011 & 2 & 0 & 0 & . & . \\
+    3 & 2011 & 8 & 1 & 0 & 1 & 4 \\
+    4 & 2011 & 8 & 1 & 0 & 1 & . \\
+    5 & 2011 & 2 & 0 & 0 & . & 4 \\
+    6 & 2011 & 7 & 1 & 0 & 0 & 2 \\
+    7 & 2011 & 7 & 1 & 0 & 0 & 3 \\
+    8 & 2011 & 8 & 1 & 0 & 1 & 1 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------
+\section{Plots version 2 (current)}
+\label{sec:plots_version_2_current_}
+
+We always want to use $t - 1$ variables to compute the groups by
+beneficiary. However, for the IV regressions, we use $t - 1$ variables
+at year $t$: That is, we use lag variables in our main specification and
+to construct our instrument. Hence we wanted to make a version of the
+plots that was consistent with this paradigm. This is achievable by
+replicating \Cref{tab:assigning_groups_for_reference_year_2011} using
+$t - 1$ (lag) variables at year $t$:
+\begin{table}[H]
+  \centering
+  \caption{Assigning Groups for Reference Year 2011}
+  \label{tab:assigning_groups_for_reference_year_2011}
+  \begin{tabular}{ccccccc}
+  \toprule
+  \verb`bene` & \verb`year` & \verb`lag plan` & \verb`lag ma` & \verb`lag term` & \verb`lag above median` & \verb`group` \\
+  \midrule
+  1 & 2011 & 1 & 1 & 1 & 0 & 4 \\
+  2 & 2011 & 2 & 0 & 0 & . & . \\
+  3 & 2011 & 3 & 1 & 1 & 0 & 4 \\
+  4 & 2011 & 4 & 0 & 1 & . & . \\
+  5 & 2011 & 5 & 1 & 1 & 0 & 4 \\
+  6 & 2011 & 6 & 1 & 1 & 1 & 2 \\
+  7 & 2011 & 7 & 1 & 0 & 0 & 3 \\
+  8 & 2011 & 8 & 1 & 0 & 1 & 1 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+Note that the groupings are identical in this case, but the year
+is now 2011 and we are instead using lag versions of the same
+variables. From here it looks tempting to proceed just as in
+\Cref{sec:plots_version_1_old_}: Keep \verb`bene` and \verb`group` then
+merge by \verb`bene` onto the main data. However, we need to account
+for deaths:  The above only defines the groups for \textit{surviving}
+beneficiaries. We actually need to insert two additional steps:
+\begin{enumerate}
+  \item Rename \verb`lag plan` to \verb`plan` and replace \verb`year` with \verb`year - 1`.
+  \item Merge by \verb`plan` (which has the \verb`lag plan` data) and year into the main data.
+\end{enumerate}
+
+This would assign each of the 4 groups in year $t - 1$ to all
+beneficiaries enrolled in the above plans regardless of whether they
+are dead in year $t$ or not. From here we \textit{can} proceed as in
+\Cref{sec:plots_version_1_old_}, but it should be clear that this is
+\textbf{\textit{not equivalent}} to version 1:
+\begin{enumerate}
+
+  \item If we define above/below median at year $t$ using plan
+    effects from year $t - 1$, we are weighting by the number of
+    \textit{surviving} beneficiaries from the plan, as opposed to
+    by all beneficiaries who were enrolled.
+
+  \item If every beneficiary in a terminated plan died, the plan would
+    get dropped from the plots altogether.
+
+  \item Since the regressions are meant to be ``stacked,'' that is,
+    taken year-by-year, any selection criteria that is applied would
+    be carried backwards, imposing a stronger selection criteria than
+    intended for the plots. For example, if we requite \verb`lag ma` to
+    equal 1, then we would exclude in year $t - 1$ every beneficiary who
+    was not in an MA plan in year $t - 2$. Since we merge the groups
+    by plan in year $t - 1$ to assign them to dead people, we are
+    effectively imposing an ``always MA'' requirement as opposed to a
+    ``lag MA'' restriction.
+
+    Note that as long as we use the \verb`ifcommand()` option to
+    apply lag restrictions (like \verb`lag ma == 1`) this last point
+    should not be a problem.
+\end{enumerate}
+
+% ---------------------------------------------------------------------
+\end{document}
