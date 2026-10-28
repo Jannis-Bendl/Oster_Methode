@@ -1,1 +1,0 @@
-# Oster_Methode
