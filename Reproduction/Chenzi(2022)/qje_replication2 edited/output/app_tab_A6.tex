@@ -1,0 +1,20 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   \\
+\midrule
+log distance \textsubscript{od}&      -1.298***&      -1.201***&      -1.149***&      -1.401***&      -1.247***\\
+            &    [0.0776]   &    [0.0818]   &    [0.0868]   &    [0.0766]   &    [0.0855]   \\\hline
+Country\textsubscript{ot} FE&           Y   &           Y   &           Y   &           Y   &           Y   \\
+Country\textsubscript{dt} FE&           Y   &           Y   &           Y   &           Y   &           Y   \\
+Common language $\times$ t&               &           Y   &               &               &           Y   \\
+Common border $\times$ t&               &               &           Y   &               &           Y   \\
+Common empire $\times$ t&               &               &               &           Y   &           Y   \\
+\midrule
+N           &       70895   &       70157   &       70157   &       70895   &       70157   \\
+Clusters    &         120   &         120   &         120   &         120   &         120   \\
+Adj. R{$^2$}&       0.535   &       0.549   &       0.537   &       0.565   &       0.568   \\
+\bottomrule
+\end{tabular}
+}

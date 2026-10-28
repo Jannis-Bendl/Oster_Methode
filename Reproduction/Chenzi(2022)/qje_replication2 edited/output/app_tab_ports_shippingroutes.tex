@@ -1,0 +1,19 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\toprule
+            &\multicolumn{1}{c}{All routes}&\multicolumn{2}{c}{Top 90\% routes}&\multicolumn{2}{c}{Top 75\% routes}\\\cmidrule(lr){2-2}\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.420** &      -0.690***&      -0.589** &      -0.893***&      -0.685***\\
+            &     [0.193]   &     [0.166]   &     [0.224]   &     [0.209]   &     [0.228]   \\
+Destination\textsubscript{d} $\times$ post FE&           Y   &           Y   &               &           Y   &               \\
+Country\textsubscript{o} $\times$ post FE&           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   \\
+\midrule
+N           &        2532   &        2100   &         406   &        1814   &         394   \\
+Ports       &         207   &         203   &         203   &         197   &         197   \\
+Clusters    &          51   &          51   &          51   &          51   &          51   \\
+\bottomrule
+\end{tabular}
+}

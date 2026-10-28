@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+            &\multicolumn{2}{c}{All}        &\multicolumn{2}{c}{No islands} &\multicolumn{2}{c}{No entrepots}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.631***&      -0.774***&      -0.584** &      -0.724** &      -0.631***&      -0.782***\\
+            &     [0.223]   &     [0.262]   &     [0.285]   &     [0.288]   &     [0.223]   &     [0.265]   \\
+Capital city $\times$ post &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Share to UK $\times$ post &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Age of banks $\times$ post&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+OG connection $\times$ post&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Country\textsubscript{o} $\times$ post FE &           Y   &               &           Y   &               &           Y   &               \\
+\midrule
+N           &         578   &         578   &         450   &         450   &         564   &         564   \\
+Ports       &         289   &         289   &         225   &         225   &         282   &         282   \\
+Clusters    &          54   &          54   &          39   &          39   &          51   &          51   \\
+\bottomrule
+\end{tabular}
+}

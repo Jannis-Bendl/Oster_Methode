@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   &\multicolumn{1}{c}{(7)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.727***&      -0.684***&      -0.669***&      -0.692***&      -0.726***&      -0.730***&      -0.732***\\
+            &     [0.209]   &     [0.172]   &     [0.136]   &     [0.161]   &     [0.159]   &     [0.159]   &     [0.170]   \\
+OG exposure $\times$ post &           Y   &               &               &               &               &               &               \\
+Asia exposure $\times$ post&               &           Y   &               &               &               &               &               \\
+Africa exposure $\times$ post&               &               &           Y   &               &               &               &               \\
+N. Amer exposure $\times$ post&               &               &               &           Y   &               &               &               \\
+S. Amer exposure $\times$ post&               &               &               &               &           Y   &               &               \\
+Australia exposure $\times$ post&               &               &               &               &               &           Y   &               \\
+Europe exposure $\times$ post&               &               &               &               &               &               &           Y   \\
+Country\textsubscript{o} $\times$ post FE&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+\midrule
+N           &         578   &         578   &         578   &         578   &         578   &         578   &         578   \\
+Ports       &         289   &         289   &         289   &         289   &         289   &         289   &         289   \\
+Clusters    &          54   &          54   &          54   &          54   &          54   &          54   &          54   \\
+\bottomrule
+\end{tabular}
+}

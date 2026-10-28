@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.750***&      -0.672** &      -0.714***&      -0.729***&      -0.701***&      -0.631***\\
+            &     [0.243]   &     [0.277]   &     [0.248]   &     [0.258]   &     [0.249]   &     [0.197]   \\
+Port\textsubscript{p} FE&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+British Emp\textsubscript{p} $\times$ post FE&           Y   &               &               &               &               &               \\
+French Emp\textsubscript{p} $\times$ post FE&               &           Y   &               &               &               &               \\
+Spanish Emp\textsubscript{p} $\times$ post FE&               &               &           Y   &               &               &               \\
+Ottoman Emp\textsubscript{p} $\times$ post FE&               &               &               &           Y   &               &               \\
+Portuguese Emp\textsubscript{p} $\times$ post FE&               &               &               &               &           Y   &               \\
+Dutch Emp\textsubscript{p} $\times$ post FE&               &               &               &               &               &           Y   \\
+\midrule
+N           &         578   &         578   &         578   &         578   &         578   &         578   \\
+Ports       &         289   &         289   &         289   &         289   &         289   &         289   \\
+Clusters    &          54   &          54   &          54   &          54   &          54   &          54   \\
+\bottomrule
+\end{tabular}
+}

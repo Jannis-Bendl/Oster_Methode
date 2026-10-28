@@ -1,0 +1,26 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\toprule
+            &\multicolumn{1}{c}{Country}&\multicolumn{3}{c}{Port}                       &\multicolumn{1}{c}{Excl. cotton}&\multicolumn{1}{c}{Poisson}&\multicolumn{1}{c}{News dates}\\\cmidrule(lr){2-2}\cmidrule(lr){3-5}\cmidrule(lr){6-6}\cmidrule(lr){7-7}\cmidrule(lr){8-8}
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   &\multicolumn{1}{c}{(7)}   \\
+\midrule
+            &               &               &               &               &               &               &               \\
+Fail\textsubscript{o} $\times$ post&      -0.606***&               &               &               &               &               &               \\
+            &     [0.214]   &               &               &               &               &               &               \\
+Fail\textsubscript{po} $\times$ post&               &      -0.727***&      -0.724***&      -0.631***&      -0.505** &      -0.985***&      -0.564** \\
+            &               &     [0.251]   &     [0.159]   &     [0.213]   &     [0.207]   &     [0.179]   &     [0.210]   \\
+Capital city $\times$ post &               &               &               &           Y   &           Y   &           Y   &           Y   \\
+Age of banks $\times$ post&               &               &               &           Y   &           Y   &           Y   &           Y   \\
+OG link $\times$ post&               &               &               &           Y   &           Y   &           Y   &           Y   \\
+Share to UK $\times$ post &               &               &               &           Y   &           Y   &           Y   &           Y   \\
+Country\textsubscript{o} FE &           Y   &               &               &               &               &               &               \\
+Port\textsubscript{p} FE &               &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Country\textsubscript{o} $\times$ post FE&               &               &           Y   &           Y   &           Y   &           Y   &           Y   \\
+\midrule
+N           &         108   &         578   &         578   &         578   &         494   &         578   &         570   \\
+Ports       &               &         289   &         289   &         289   &         247   &         289   &         289   \\
+Clusters    &          54   &          54   &          54   &          54   &          50   &          54   &          54   \\
+\bottomrule
+\end{tabular}
+}
