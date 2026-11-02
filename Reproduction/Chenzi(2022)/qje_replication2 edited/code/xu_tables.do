@@ -5,6 +5,7 @@
 * =================================================================
 * Table I: Summary statistics: Ports and Countries
 * =================================================================
+global filepath "C:\Users\jabef\Desktop\FU Job\Prof.Marcus\Python_Scraper\Oster_Methode\Reproduction\Chenzi(2022)\qje_replication2 edited"
 {
 	*Ports
 	use "$filepath/data/sr_ports_final.dta", clear
@@ -537,13 +538,13 @@
 	*Table output
 	{
 	* Table IV: Intensive margin effects
-		version $system: esttab tab4_* using "$filepath/output/tab_ports_controls_qje.tex", ///
+		esttab tab4_* using "$filepath/output/tab_ports_controls_qje.tex", ///
 		replace se starlevels(* 0.1 ** 0.05 *** 0.01) star bracket ///
 		varlabels(post_fail_lon "Fail\textsubscript{po} $\times$ post" ///
 			post_fail_lon_c "Fail\textsubscript{o} $\times$ post") ///
 				order(post_fail_lon_c  post_fail_lon) ///
 				keep(post_fail_lon_c post_fail_lon) ///
-				booktab mgroups ("Country" "Port"  "Excl. cotton" "Poisson" "News dates", ///
+				booktabs mgroups("Country" "Port"  "Excl. cotton" "Poisson" "News dates", ///
 				pattern(1 1 0 0 1 1 1) ///
 				prefix(\multicolumn{@span}{c}{) suffix(}) ///
 				span erepeat(\cmidrule(lr){@span})) lines ///
@@ -556,7 +557,7 @@
 						"Country\textsubscript{o} FE = indic_o" ///
 						"Port\textsubscript{p} FE = indic_p" ///
 						"Country\textsubscript{o} $\times$ post FE=indic_ot" ///
-						 , labels (Y  )) nonotes mlabels(, none) eqlabels(" " " ")
+						 , labels (Y )) nonotes mlabels(, none) eqlabels(" " " ")
 						 
 						 				 
 	*Table V: Extensive margin effect of bank failures on shipping
@@ -576,7 +577,7 @@
 						"Port\textsubscript{p} FE = indic_p" ///
 						"Country\textsubscript{o} $\times$ post FE=indic_ot" ///
 						"Country\textsubscript{o} FE=indic_o" ///
-						 , labels (Y  )) nonotes mlabels(, none)
+						 , labels(Y )) nonotes mlabels(, none)
 	
 	}
 

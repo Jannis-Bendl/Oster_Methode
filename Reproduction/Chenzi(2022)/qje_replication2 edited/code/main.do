@@ -2,7 +2,7 @@ clear
 
 /*Set filepath below*/
 
-global filepath 
+global filepath "C:\Users\jabef\Desktop\FU Job\Prof.Marcus\Python_Scraper\Oster_Methode\Reproduction\Chenzi(2022)\qje_replication2 edited"
 cd "$filepath"
 sysdir set PLUS "$filepath/code/ado_plus"
 sysdir

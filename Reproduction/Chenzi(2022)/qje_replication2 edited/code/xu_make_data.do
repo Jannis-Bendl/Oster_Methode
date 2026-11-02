@@ -7,6 +7,8 @@
 * =================================================================	
 	
 	*Create bilateral trade panel
+	
+global filepath "C:\Users\jabef\Desktop\FU Job\Prof.Marcus\Python_Scraper\Oster_Methode\Reproduction\Chenzi(2022)\qje_replication2 edited"
 {	
 	use "$filepath/data/lr_trade.dta", clear
 		qui merge m:1 country_o using "$filepath/data/shock_country.dta"
