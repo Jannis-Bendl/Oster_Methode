@@ -1,0 +1,21 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+            &\multicolumn{2}{c}{Ships to UK}&\multicolumn{2}{c}{Ships not to UK}&\multicolumn{2}{c}{All ships}  \\\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.705*  &      -0.784** &      -0.791***&      -0.739***&      -0.420** &      -0.428** \\
+            &     [0.376]   &     [0.376]   &     [0.246]   &     [0.268]   &     [0.191]   &     [0.201]   \\
+Destination\textsubscript{d} $\times$ post FE&               &               &               &               &           Y   &           Y   \\
+ln(distance\textsubscript{od}) &               &               &               &               &               &           Y   \\
+Country\textsubscript{o} $\times$ post FE&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port controls $\times$ post&               &           Y   &               &           Y   &               &               \\
+\midrule
+N           &         452   &         452   &         506   &         506   &        2532   &        2532   \\
+Ports       &         226   &         226   &         253   &         253   &         207   &         207   \\
+Clusters    &          53   &          53   &          54   &          54   &          52   &          52   \\
+\bottomrule
+\end{tabular}
+}

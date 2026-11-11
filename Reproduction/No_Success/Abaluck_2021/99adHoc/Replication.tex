@@ -1,0 +1,216 @@
+\documentclass[12pt,english,hidelinks]{article}
+\input{ReplicationPreamble.tex}
+
+\begin{document}
+% \title{\textbf{Mortality Effects and Choice Across} \\ \textbf{Private Health Insurance Plans}}
+% \maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                         Main Paper Results                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Tables/_19Table1_100pct.tex}\clearpage
+
+\begin{figure}[t]
+  \begin{center}
+  \caption{\label{fig:observational_hist}Observational Mortality}
+  \vspace{-0.4cm}
+  \includegraphics[width=13cm,trim=4 4 4 4, clip]{Graphics/_19Figure1_100pct.png}
+  \end{center}
+  \vspace{-0.5cm}
+  {\footnotesize{}Notes: This figure summarizes the enrollment-weighted distribution of observational mortality across MA plans. The solid dark line shows this distribution when observational mortality is estimated from Equation \eqref{eq:vam}, with all demographic controls, while the light dashed line shows the corresponding distribution for a simpler specification that omits age, race, sex, and dual-eligible status. Average observational mortality across all plans (traditional Medicare and MA) is normalized to the average of the full model. Estimates are shrunk via the empirical Bayes procedure in Appendix \ref{sec:shrinkage}. Estimated means and standard deviations of $\mu_j$ for MA plans are for the prior distribution, computed as described in Appendix \ref{sec:shrinkage}, and shown for each estimation procedure.}
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\begin{figure}[t]
+  \begin{center}
+  \caption{\label{fig:first_stage}Plan Terminations and Observational Mortality}
+  \vspace{-0.4cm}
+  \includesvg[width=13cm]{Graphics/planEffect_normalized.svg}
+  \end{center}
+  \vspace{-0.3cm}
+  {\footnotesize{}Notes: This figure shows regression-adjusted trends in the observational mortality for enrollees in non-terminated and terminated MA plans, separately for plans with above- and below-median observational mortality. The median is defined over the entire IV sample. Data is plotted in the last year prior to termination for terminated plans and the following year. Termination effects are estimated in each year and median group by a separate regression which controls for county-by-year fixed effects; flexible interactions of lagged plan type, and lagged market shares; and beneficiary demographics (age in 5-year bands, sex, race and dual-eligibility status). County-clustered 95\% confidence intervals for the termination effects are shown in brackets.}
+  {\footnotesize\par}
+\end{figure}
+
+\begin{figure}[t]
+  \begin{center}
+  \caption{\label{fig:diff_in_diff}Plan Terminations and Beneficiary Mortality}
+  \vspace{-0.4cm}
+  \includesvg[width=13cm]{Graphics/mortality_normalized.svg}
+  \end{center}
+  \vspace{-0.3cm}
+  {\footnotesize{}Notes: This figure shows regression-adjusted trends in the one-year mortality of enrollees of non-terminated and terminated MA plans, separately for plans with above- and below-median observational mortality. The median is defined over the entire IV sample. Data is plotted in the last year prior to termination for terminated plans and the following year. Termination effects are estimated in each year and median group by a separate regression which controls for county-by-year fixed effects; flexible interactions of lagged plan type, and lagged market shares; and beneficiary demographics (age in 5-year bands, sex, race and dual-eligibility status). County-clustered 95\% confidence intervals for these effects are shown in brackets.}
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\input{Tables/_19Table2_100pct.tex}\clearpage
+
+\begin{figure}
+  \begin{center}
+  \caption{\label{fig:viv}Graphical Tests of Assumptions and the Reduced Form}
+  \hspace*{-0.5in}
+  \includegraphics[width=9.2cm,trim=4 4 4 4, clip]{Graphics/FS_100pct_nq10.png}\includegraphics[width=9.2cm,trim=4 4 4 4, clip]{Graphics/bal_100pct_nq10.png}\\
+  \hspace*{-0.5in}
+  \includegraphics[width=9.2cm,trim=4 4 4 4, clip]{Graphics/fb_100pct_nq10.png}\includegraphics[width=9.2cm,trim=4 4 4 4, clip]{Graphics/rf_100pct_nq10.png}
+  \end{center}
+  {\footnotesize{}Notes: This figure illustrates the three assumptions in our IV approach and the IV reduced form. Panel A shows average observational mortality by deciles of lagged observational mortality among non-terminated and terminated plans, controlling for county-by-year fixed effects and other observables in our baseline specification. Panel B shows the corresponding averages of predicted one-year mortality given omitted beneficiary demographics (age, sex, race, and dual-eligible status). Panel C shows the corresponding averages of a predicted forecast residual given omitted plan characteristics (star ratings, premiums, MLRs, and an indicator for donut hole coverage). Panel D shows the corresponding averages of one-year mortality. Points are the average of each left-hand side variable in deciles of lag plan observational mortality combined with the decile-specific termination effects estimated from specifications of the form of Equation \eqref{eq:first_stage}, with controls as in Table \ref{tab:validation}, including decile main effects. Coefficients are normalized to remove termination main effects.}
+  {\footnotesize\par}
+\end{figure}
+
+\input{Tables/_19Table3_100pct.tex}\clearpage
+
+\begin{table}
+  \caption{\label{tab:forecast_star_premiums}Plan Characteristics Regressions}
+  \vspace{-0.5cm}
+  \begin{center}
+  \begin{tabular}{l *{5}{d{1.4}}}
+  \toprule
+   & \mc{(1)} & \mc{(2)} & \mc{(3)} & \mc{(4)} & \mc{(5)}  \tabularnewline
+  \midrule
+  & \multicolumn{5}{c}{Panel A: OLS (Observational Mortality)}  \tabularnewline
+  \input{Tables/_19Table4_100pct_Panel1.tex}
+  \\
+  & \multicolumn{5}{c}{Panel B: IV (Plan Mortality Effect)} \tabularnewline
+  \input{Tables/_19Table4_100pct_Panel2.tex}
+  \end{tabular}
+  \par\end{center}
+  {\small{}Notes: This table reports OLS and IV estimates of the regression of observational mortality and plan mortality effects, respectively, on plan characteristics. The dependent variable is observational mortality in Panel A and one-year mortality in Panel B. All specifications include the baseline controls in columns 3 and 4 of Table \ref{tab:iv}. The IV specifications instrument by the interaction of lagged plan characteristics and terminations, controlling for main effects. Premiums are monthly and measured in hundreds of dollars. Missing plan characteristics are replaced by the average non-missing value across plans. Standard errors are clustered by county and reported in parentheses. The maximum forecast $R^2$ is computed using the lower bound of $Var(\beta_j)$ implied by the observational mortality forecast coefficient in column 3 of Table \ref{tab:iv}.}
+\end{table}
+\clearpage
+
+\begin{table}[t]
+  \caption{\label{tab:wtp}Willingness to Pay Bounds}
+  \vspace{-0.25cm}
+  \begin{center}
+  \begin{tabular}{c *{2}{d{1.4}}*{2}{d{3.3}}}
+  \toprule 
+  \mc{\multirow{3}{1.5cm}{Premium Elasticity}} & \mc{\multirow{3}{2.75cm}{ \centering Premium Coefficient ($\alpha$)}} & \mc{\multirow{3}{2.75cm}{ \centering Forecast Coefficient ($\kappa$)}} & \mc{\multirow{3}{2.75cm}{ \centering Minimum Quality Coefficient ($\tau$)}} & \mc{\multirow{3}{2.75cm}{ \centering Maximum WTP: $\tau/(100\times\alpha)$}} \tabularnewline
+   &  &  & & \tabularnewline
+    &  &  & & \tabularnewline
+  \mc{(1)} & \mc{(2)} & \mc{(3)} & \mc{(4)} & \mc{(5)} \tabularnewline
+  \midrule
+  \input{Tables/_19Table5_100pct.tex}
+  \end{tabular}
+  \par\end{center}
+  {\footnotesize{}Notes: Column (5) of this table reports estimates of the upper bound on quality willingness to pay (WTP) described in the text, for different values of the premium elasticity given in column (1). WTP is expressed in dollars per percentage point reduction in one-year mortality. The forecast estimates in column (3) are obtained by an IV regression of one-year mortality on the adjusted mean utility ($\xi_j$) of a beneficiary's plan, instrumented by the interaction of lagged adjusted mean utility interacted with lag terminations and controlling for lag adjusted mean utility and lag termination main effects along with the baseline controls in Table \ref{tab:iv} (including demographics). Mean utility is adjusted by the premium utility coefficient (in column (2)) implied by the elasticity in column (1). The estimation sample is as in Table \ref{tab:iv}. Column (4) translates the forecast coefficient estimate to an estimate of the quality coefficient bound described in the text. Standard errors are clustered by county and reported in parentheses.}
+  \vspace{-0.1cm}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                          Appendix Results                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\appendix
+\setcounter{figure}{0} \renewcommand{\thefigure}{A.\Roman{figure}.}
+\setcounter{table}{0} \renewcommand{\thetable}{A.\Roman{table}.}
+
+\begin{figure}[h]
+  \begin{center}
+  \caption{\label{fig:map}Geographic Distribution of Plan Terminations}
+  \includegraphics[width=14cm,trim=4 4 4 4, clip]{Graphics/_19figureA1_term_map_pct_100.png}
+  \end{center}
+  \vspace{-0.2cm}
+  {\footnotesize{}Notes: This map shows the fraction of plans in a county that were terminated over 2008-2011, with counties shaded according to the quantiles reported in the legend.}
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\begin{figure}[h]
+  \begin{center}
+  \caption{\label{fig:shrinkage}Distribution of Observational Mortality Shrinkage Coefficients}
+  \includesvg[width=14cm]{Graphics/_19lambda_hist100_1trim_2.svg}
+  \end{center}
+  \vspace{-0.5cm}
+  {\footnotesize{}Notes: This figure shows the distribution of ``pseudo shrinkage coefficients'' for observational mortality, given by the ratio of each plan's de-meaned posterior to the de-meaned OLS estimate, across beneficiary-years in our main sample. A coefficient close to one thus implies minimal shrinkage. This coefficient can be negative under the hierarchical shrinkage procedure described in Appendix \ref{sec:shrinkage}.}
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\begin{figure}[H]
+  \begin{center}
+  \caption{\label{fig:riskscores}Balance on Plan Risk Scores and Beneficiary Age}
+  \vspace{-0.2cm}
+  \centerline{\includegraphics[width=9cm,trim=0 0 0 0, clip]{Graphics/riskscore_bal_100.png}\includegraphics[width=9cm,trim=0 0 0 0, clip]{Graphics/age_bal_100.png}}
+  \end{center}
+  \vspace{-0.3cm}
+  {\footnotesize{}Notes: This figure shows average beneficiary risk scores and beneficiary age by deciles of lagged observational mortality among non-terminated and terminated plans (with non-missing risk score averages), controlling for county-by-year fixed effects and other observables in our baseline specification. The points in each panel are given by the average dependent variable, predicted by the lagged observational mortality in the regression model, combined with the decile-specific termination effects estimated from specifications of the form of Equation \eqref{eq:first_stage}. The controls as in Table \ref{tab:validation}, including decile main effects. Coefficients are normalized to remove termination main effects.}
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\begin{figure}[h]
+  \begin{center}
+  \caption{\label{fig:doug_fig}Forecast Regression First-Stage and Reduced-Form Estimates}
+  \vspace{0cm}
+  \centerline{
+  \includegraphics[width=9.2cm]{Graphics/FSRF_100pct_nq10_v1.png}\includegraphics[width=9.2cm]{Graphics/viv_100pct_nq10.png}}
+  \end{center}
+  \vspace{-0.5cm}
+  {\footnotesize{}Notes: Panel A shows the estimated effects of lagged plan termination on enrolled plan observational mortality (first stage) and average one-year mortality (reduced form) by deciles of lagged observational mortality. Panel B plots these estimates against each other. The slope of the line of best fit through the origin gives an IV estimate of the forecast coefficient. Estimates come from Panel A and D of Figure \ref{fig:viv}; see the notes from that figure for computation details. }
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\begin{figure}[h]
+  \begin{center}
+  \caption{\label{fig:split_samp}Observational Mortality Persistence: 2006-08 vs. 2009-11}
+  \vspace{-0.4cm}
+  \includegraphics[width=11cm, trim=4 4 4 4, clip]{Graphics/YearBin_19_100pct_common_mucounty_mleCYYBPlan.png}
+  \end{center}
+  \vspace{-0.3cm}
+  {\footnotesize{}Notes: This figure shows the average observational mortality of plans measured in 2006-2008 by ventiles of observational mortality measured in 2009-2011. We restrict to plans found in both halves of the data. The dashed line indicates the standard deviation of 2009-2011 observational mortality by 2006-2008 ventiles.}
+  {\footnotesize\par}
+\end{figure}
+\clearpage
+
+\input{Tables/_19TableA1_100pct.tex}\clearpage
+
+\input{Tables/_19TableA2_100pct.tex}\clearpage
+
+\begin{table}
+  \caption{\label{tab:predictedM}Predicted Mortality Model}
+  \vspace{-0.5cm}
+  \begin{center}
+  \begin{tabular}{l*{1}{d{1.4}}}
+  \toprule
+   & \mc{\multirow[c]{1}{2cm}{\centering (1)}}  \tabularnewline
+  \midrule 
+  \input{Tables/_19TableA3_100pct.tex}
+  \end{tabular}
+  \end{center}
+  {\footnotesize{}Notes: This table reports coefficients of our predicted mortality regression model. Standard errors are clustered by county and reported in parentheses. The sample includes 848 singleton observations which are dropped from the main IV sample for being perfectly collinear with the fixed effects.}\tabularnewline
+  {\footnotesize\par}
+\end{table}
+\clearpage
+
+\begin{table}
+  \caption{\label{tab:more_balance}Additional Balance Tests}
+  \vspace{-0.5cm}
+  \begin{center}
+  \begin{tabular}{ld{1.3}d{1.4} }
+  \toprule 
+  \multicolumn{1}{c}{\multirow[c]{1}{*}{ }}  & \multicolumn{1}{c}{\multirow[c]{1}{2.25cm}{ \centering (1)}} & \multicolumn{1}{c}{\multirow[c]{1}{2.25cm}{ \centering (2)}} \tabularnewline
+  \midrule
+  \input{Tables/_19TableA4_100pct.tex}
+  \end{tabular}
+  \end{center}
+  {\footnotesize{}Notes: This table follows Panel B of Table \ref{tab:validation} in presenting OLS coefficient in a balance regression of observable controls on the instrument and controls. In column (1) the instrument is the interaction of observational mortality of the lagged plan and a lagged plan termination indicator. In column (2) the instrument is the interaction of an indicator for above-median observational mortality of the lagged plan and a lagged plan termination indicator. In all specifications, we control for the observational mortality of the lagged plan and termination main effects, county-by-year fixed effects, year- and county-specific termination effects, and interactions of lagged plan characteristics (as described in the text). Standard errors are clustered by county and reported in parentheses.}\tabularnewline
+  {\footnotesize\par}
+\end{table}
+\clearpage
+
+\input{Tables/_19osterOVB_100pct.tex}\clearpage
+
+\input{Tables/_19tableA6_100pct.tex}\clearpage
+
+\input{Tables/_19tableA7_100pct.tex}\clearpage
+
+\input{Tables/_19tableA8_100pct.tex}\clearpage
+
+\input{Tables/_19tableA9_100pct.tex}\clearpage
+
+\end{document}

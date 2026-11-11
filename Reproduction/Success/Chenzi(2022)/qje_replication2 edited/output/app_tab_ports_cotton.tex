@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+            &         All   &    excl USA   & excl Brazil   &  excl Egypt   &  excl India   &excl all cotton   \\
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.631***&      -0.578***&      -0.619***&      -0.588***&      -0.618***&      -0.505** \\
+            &     [0.213]   &     [0.207]   &     [0.216]   &     [0.204]   &     [0.220]   &     [0.207]   \\
+Capital city $\times$ post &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Share to UK $\times$ post &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Age of banks $\times$ post&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+OG connection $\times$ post&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Country\textsubscript{o} $\times$ post FE&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+\midrule
+N           &         578   &         560   &         556   &         564   &         548   &         494   \\
+Ports       &         289   &         280   &         278   &         282   &         274   &         247   \\
+Clusters    &          54   &          53   &          53   &          53   &          53   &          50   \\
+\bottomrule
+\end{tabular}
+}

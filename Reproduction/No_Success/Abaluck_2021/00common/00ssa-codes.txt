@@ -1,0 +1,67 @@
+keep, state, name,st
+1,01,Alabama,al
+1,02,Alaska,ak
+1,03,Arizona,az
+1,04,Arkansas,ar
+1,05,California,ca
+1,06,Colorado,co
+1,07,Connecticut,ct
+1,08,Delaware,de
+1,09,District of Columbia,dc
+1,10,Florida,fl
+1,11,Georgia,ga
+1,12,Hawaii,hi
+1,13,Idaho,id
+1,14,Illinois,il
+1,15,Indiana,in
+1,16,Iowa,ia
+1,17,Kansas,ks
+1,18,Kentucky,ky
+1,19,Louisiana,la
+1,20,Maine,me
+1,21,Maryland,md
+1,22,Massachusetts,ma
+1,23,Michigan,mi
+1,24,Minnesota,mn
+1,25,Mississippi,ms
+1,26,Missouri,mo
+1,27,Montana,mt
+1,28,Nebraska,ne
+1,29,Nevada,nv
+1,30,New Hampshire,nh
+1,31,New Jersey,nj
+1,32,New Mexico,nm
+1,33,New York,ny
+1,34,North Carolina,nc
+1,35,North Dakota,nd
+1,36,Ohio,oh
+1,37,Oklahoma,ok
+1,38,Oregon,or
+1,39,Pennsylvania,pa
+0,40,Puerto Rico,pr
+1,41,Rhode Island,ri
+1,42,South Carolina,sc
+1,43,South Dakota,sd
+1,44,Tennessee,tn
+1,45,Texas,tx
+1,46,Utah,ut
+1,47,Vermont,vt
+0,48,Virgin Islands,vi
+1,49,Virginia,va
+1,50,Washington,wa
+1,51,West Virginia,wv
+1,52,Wisconsin,wi
+1,53,Wyoming,wy
+0,54,Africa,
+0,55,Asia,
+0,56,Canada,
+0,57,Central America and West Indies,
+0,58,Europe,
+0,59,Mexico,
+0,60,Oceania,
+0,61,Philippines,
+0,62,South America,
+0,63,U.S. Possessions,
+0,97,Saipan - MP,mp
+0,98,Guam,gu
+0,99,American Samoa,as

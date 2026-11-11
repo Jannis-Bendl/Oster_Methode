@@ -1,0 +1,21 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.701***&      -0.715***&      -0.613***&      -0.665***&      -0.673***&      -0.564** \\
+            &     [0.166]   &     [0.167]   &     [0.166]   &     [0.199]   &     [0.206]   &     [0.210]   \\
+Capital city $\times$ post &               &           Y   &               &               &               &           Y   \\
+Share to UK $\times$ post &               &               &           Y   &               &               &           Y   \\
+Age of banks $\times$ post&               &               &               &           Y   &               &           Y   \\
+OG connection $\times$ post&               &               &               &               &           Y   &           Y   \\
+Country\textsubscript{o} $\times$ post FE&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+\midrule
+N           &         570   &         570   &         570   &         570   &         570   &         570   \\
+Ports       &         285   &         285   &         285   &         285   &         285   &         285   \\
+Clusters    &          54   &          54   &          54   &          54   &          54   &          54   \\
+\bottomrule
+\end{tabular}
+}

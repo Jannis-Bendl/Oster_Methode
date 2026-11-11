@@ -1,0 +1,22 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.755***&      -0.871***&      -0.987***&      -0.930***\\
+            &     [0.255]   &     [0.274]   &     [0.223]   &     [0.276]   \\
+Fail\textsubscript{other, po} $\times$ post&      0.0963   &       0.143   &               &               \\
+            &    [0.0794]   &    [0.0869]   &               &               \\
+non-Brit banks $\times$ Fail\textsubscript{po} $\times$ post&               &               &       0.488** &       0.500** \\
+            &               &               &     [0.195]   &     [0.207]   \\
+Port controls $\times$ post &               &           Y   &               &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   \\
+Country\textsubscript{o} $\times$ post FE&               &               &           Y   &           Y   \\
+\midrule
+N           &         578   &         578   &         578   &         578   \\
+Ports       &         289   &         289   &         289   &         289   \\
+Clusters    &          54   &          54   &          54   &          54   \\
+\bottomrule
+\end{tabular}
+}

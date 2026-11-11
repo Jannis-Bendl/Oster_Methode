@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\toprule
+            &\multicolumn{1}{c}{(1)}   &\multicolumn{1}{c}{(2)}   &\multicolumn{1}{c}{(3)}   &\multicolumn{1}{c}{(4)}   &\multicolumn{1}{c}{(5)}   &\multicolumn{1}{c}{(6)}   &\multicolumn{1}{c}{(7)}   \\
+\midrule
+Fail\textsubscript{po} $\times$ post&      -0.724***&      -0.740***&      -0.634***&      -0.704***&      -0.727***&      -0.698***&      -0.622***\\
+            &     [0.167]   &     [0.170]   &     [0.177]   &     [0.195]   &     [0.219]   &     [0.183]   &     [0.224]   \\
+Capital city $\times$ post &               &           Y   &               &               &               &               &           Y   \\
+Share to UK $\times$ post &               &               &           Y   &               &               &               &           Y   \\
+Age of banks $\times$ post&               &               &               &           Y   &               &               &           Y   \\
+OG connection $\times$ post&               &               &               &               &           Y   &               &           Y   \\
+Non-Brit banks $\times$ post&               &               &               &               &               &           Y   &           Y   \\
+Country\textsubscript{o} $\times$ post FE&           Y   &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+Port\textsubscript{p} FE &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   &           Y   \\
+\midrule
+N           &         578   &         578   &         578   &         578   &         578   &         578   &         578   \\
+Ports       &         289   &         289   &         289   &         289   &         289   &         289   &         289   \\
+Clusters    &          54   &          54   &          54   &          54   &          54   &          54   &          54   \\
+$\beta$*    &       -.729   &       -.746   &       -.635   &       -.706   &       -.732   &       -.701   &       -.623   \\
+$\delta$    &       41.89   &       43.84   &       39.79   &       33.74   &        41.5   &       38.49   &       30.41   \\
+\bottomrule
+\end{tabular}
+}

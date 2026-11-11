@@ -1,0 +1,25 @@
+\begin{table}[h]
+  \caption{\label{tab:vsl_expected_discounting}Discounted Value of Statistical Life}
+  \vspace{-0.5cm}
+  \begin{center}
+    \begin{tabular}{cccc}
+    \toprule
+      Annual VSLY (\$1,000s)
+    & Discount Factor
+    & $Pr(\text{death})$ Multiplier
+    & Discounted VSL (\$1,000s)
+    \\\midrule
+    369   & $0.95$ & $\times 1$ & \#0,\#  \\
+          &        & $\times 2$ & \#0,\#  \\\cmidrule{2-4}
+          & $0.98$ & $\times 1$ & \#0,\#  \\
+          &        & $\times 2$ & \#0,\#  \\\midrule
+    184.5 & $0.95$ & $\times 1$ & \#0,\#  \\
+          &        & $\times 2$ & \#0,\#  \\\cmidrule{2-4}
+          & $0.98$ & $\times 1$ & \#0,\#  \\
+          &        & $\times 2$ & \#0,\#  \\
+    \bottomrule
+    \end{tabular}
+  \end{center}
+  {\footnotesize{}Notes: The table estimates the expected VSL by computing the discounted expected stream of a VSLY. Specifically for individual $i$, we compute $\sum^{100}_{t = \text{age}_i} \text{VSLY} \cdot \delta^{t - \text{age}_i} \prod_{s = \text{age}_i}^t (1 - P(\text{death at age $s$}))$. The second panel considers cutting the VSLY in half, assuming all the elderly in our sample are in poor health.  $P(\text{death})$ is taken from the SSA actuarial life tables; in the second row of each panel we consider doubling the mortality rate for each year. We consider discount rates of 2\% and 5\%. For comparison, the OMB uses a social discount rate of 3\% for private consumption \url{https://obamawhitehouse.archives.gov/omb/circulars_a004_a-4/}.}
+  {\footnotesize\par}
+\end{table}

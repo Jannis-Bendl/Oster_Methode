@@ -1,0 +1,78 @@
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{color}
+\definecolor{note_fontcolor}{rgb}{0.800781, 0.800781, 0.800781}
+\usepackage{babel}
+\usepackage{array}
+\usepackage{float}
+\usepackage{svg}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{dcolumn,booktabs}
+\usepackage{amsbsy}
+\usepackage{amstext}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{setspace}
+\usepackage[authoryear]{natbib}
+\usepackage{changepage}
+\usepackage{pdflscape}
+\onehalfspacing
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+\monthname[\THEMONTH] \THEYEAR}
+  
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ urlcolor=blue, linkcolor=red, citecolor=black}
+\urlstyle{same}
+\makeatletter
+\setcitestyle{round}
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+%% The greyedout annotation environment
+\newenvironment{lyxgreyedout}
+  {\textcolor{note_fontcolor}\bgroup\ignorespaces}
+  {\ignorespacesafterend\egroup}
+%% Strike out display math with tikz
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand{\lyxmathsout}[1]{%
+  \tikz[baseline=(math.base)]{
+    \node[inner sep=0pt,outer sep=0pt](math){#1};
+    \draw($(math.south west)+(2em,.5em)$)--($(math.north east)-(2em,.5em)$);
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\theoremstyle{plain}
+\newtheorem{assumption}{\protect\assumptionname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{setspace}
+\usepackage[labelfont=bf]{caption}
+\usepackage{titletoc}
+\usepackage{datetime}
+\usepackage{amsmath}
+
+%Create custom decimal-alignment column type for tables
+% to use with 3 columns and n decimal places: \begin{tabular}{l *{2}{d{1.n}} }
+\newcolumntype{d}[1]{D{.}{.}{#1}} 
+%custom short command for centered multicolumn in tabular setting (for use with d column type)
+%to use: \mc{text}
+\newcommand\mc[1]{\multicolumn{1}{c}{#1}}
+
+\makeatother
+
+\providecommand{\assumptionname}{Assumption}
