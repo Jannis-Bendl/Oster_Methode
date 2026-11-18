@@ -1,0 +1,90 @@
+* Figure A1: Standalone reproduction
+
+* Set your project path here
+* global path "C:\Users\jabef\Desktop\FU Job\Prof.Marcus\Python_Scraper\Oster_Methode\Algan(2026)\Codes\Analysis"
+
+* Calculate pi_star
+global pi1 = 0.1293134
+global pi2 = 0.0353468
+global pistar = $pi1/$pi2
+
+di "pi_star = $pistar"
+
+* Fixed coefficients
+global coeff_nu2 = 1.124088
+global coeff_L1 = -.0947624
+global coeff_L2 = -1.198854
+
+* Parameters
+global gamma = 1
+global delta = 1
+
+* Initial calculation
+global B1 = ($delta * $pistar * $coeff_L1 + $coeff_nu2) / ///
+    (($delta + 1)*$pistar + 1/$gamma)
+
+global B2 = $B1/$gamma
+
+global beta1 = $coeff_L1 - $B1
+global beta2 = $coeff_L2 + ($coeff_nu2 - $B2)
+
+di "B1 = " $B1
+di "beta_1 = " $beta1
+di "beta_2 = " $beta2
+
+* Create plotting dataset
+clear
+set obs 100
+
+gen gamma = _n/50 in 12/100
+
+* Calculate coefficients for different values of delta
+forvalues i = 1(1)20 {
+    global delta = `i'/10
+
+    gen B1 = ($delta * $pistar * $coeff_L1 + $coeff_nu2) / ///
+        (($delta + 1)*$pistar + 1/gamma)
+
+    gen B2 = B1/gamma
+
+    gen beta1_`i' = $coeff_L1 - B1
+    gen beta2_`i' = $coeff_L2 + ($coeff_nu2 - B2)
+
+    drop B1 B2
+}
+
+* Figure beta_2
+twoway ///
+    (line beta2_1 gamma) ///
+    (line beta2_4 gamma) ///
+    (line beta2_7 gamma) ///
+    (line beta2_10 gamma) ///
+    (line beta2_15 gamma) ///
+    (line beta2_20 gamma) ///
+    in 12/100, ///
+    xtitle(gamma) ///
+    title("Coefficient beta_2 of L_2 as a function of delta and gamma", size(medium)) ///
+    legend(order(1 "delta = 0.1" 2 "delta = 0.4" 3 "delta = 0.7" ///
+    4 "delta = 1" 5 "delta = 1.5" 6 "delta = 2")) ///
+    graphregion(color(white)) bgcolor(white)
+
+graph save "$path/Results/Beta2_by_DeltaGamma", replace
+graph export "$path/Results/Beta2_by_DeltaGamma.pdf", as(pdf) replace
+
+* Figure beta_1
+twoway ///
+    (line beta1_1 gamma) ///
+    (line beta1_4 gamma) ///
+    (line beta1_7 gamma) ///
+    (line beta1_10 gamma) ///
+    (line beta1_15 gamma) ///
+    (line beta1_20 gamma) ///
+    in 12/100, ///
+    xtitle(gamma) ///
+    title("Coefficient beta_1 of L_1 as a function of delta and gamma", size(medium)) ///
+    legend(order(1 "delta = 0.1" 2 "delta = 0.4" 3 "delta = 0.7" ///
+    4 "delta = 1" 5 "delta = 1.5" 6 "delta = 2")) ///
+    graphregion(color(white)) bgcolor(white)
+
+graph save "$path/Results/Beta1_by_DeltaGamma", replace
+graph export "$path/Results/Beta1_by_DeltaGamma.pdf", as(pdf) replace

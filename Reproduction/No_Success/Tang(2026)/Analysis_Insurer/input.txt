@@ -1,0 +1,36 @@
+# Each line of instruction in this `inputs.txt` file should contain a destination and source delimited by a `|`.
+# Lines beginning with # are ignored.
+# 
+# For example, suppose your `inputs.txt` file contains the following lines of text:
+# > destination | source
+#
+# Now suppose you run the following line of code:
+# > link_inputs(paths, ['inputs.txt'])
+# 
+# This will create a link in `paths['input_dir']` named `destination` that links to `source`.
+# 
+# Alternative, suppose you run the following line of code:
+# > copy_inputs(paths, ['inputs.txt'])
+# 
+# This will create a file in `paths['input_dir']` named `destination` that is a copy of `source`.
+
+# Destination | Source
+III_Captives.xlsx | {root}/raw/III/III_Captives.xlsx
+III_DPW_PC.xlsx | {root}/raw/III/III_DPW_PC.xlsx
+StateYear.rds | {root}/CleanData/output/StateYear.rds
+CaptiveRegulators.csv | {root}/raw/States/CaptiveRegulators.csv
+AMBest_Impairment_Transition_Tables.csv | {root}/CleanData/output/AMBest_Impairment_Transition_Tables.csv
+AMBest_ID_NAIC.csv | {root}/raw/AMBest/AMBest_ID_NAIC.csv
+AMBest_Ratings_All.csv | {root}/raw/AMBest/AMBest_Ratings_All.csv
+SNL_Financials.csv | {root}/CleanData/output/SNL_Financials.csv
+SNL_Financials_Group.csv | {root}/CleanData/output/SNL_Financials_Group.csv
+SNL_Quantities.csv | {root}/CleanData/output/SNL_Quantities.csv
+SNL_Reinsurance.csv | {root}/raw/SNL_Reinsurance.csv
+SNL_All.csv | {root}/CleanData/output/SNL_All.csv
+CompuLife_All.csv | {root}/CleanData/output/CompuLife_All.csv
+Demand_All.csv | {root}/CleanData/output/Demand_All.csv
+Other_All.csv | {root}/CleanData/output/Other_All.csv
+SNL_Impairments.csv | {root}/CleanData/output/SNL_Impairments.csv
+NOLHGA_Insolvencies.xlsx | {root}/raw/NAIC/NOLHGA_Insolvencies.xlsx
+SNL_Life_Financials_Company.xls | {root}/raw/SNL/SNL_Life_Financials_Company.xls
+SNL_Life_Basic_Information_Company.xls | {root}/raw/SNL/SNL_Life_Basic_Information_Company.xls

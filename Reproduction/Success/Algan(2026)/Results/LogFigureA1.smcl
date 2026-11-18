@@ -1,0 +1,35 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\jabef\Desktop\FU Job\Prof.Marcus\Python_Scraper\Oster_Methode\Algan(2026)\/Results/LogFigureA1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}18 Nov 2026, 11:55:45
+{txt}
+{com}. 
+. //////  ROBUSTNESS CHECKS
+> ******* New check using Intensity of Friendship
+. cap drop sample
+{txt}
+{com}. quietly reg DiffPPa LUL2 IG DiffPP $Xvar // GG
+{err}no variables defined
+{txt}{search r(111), local:r(111);}
+
+end of do-file
+
+{search r(111), local:r(111);}
+
+{com}. display XVar
+{res}{err}XVar not found
+{txt}{search r(111), local:r(111);}
+
+{com}. display $XVar
+{res}
+
+{com}. describe
+
+{txt}Contains data
+ Observations:{res}             0                  
+{txt}    Variables:{res}             0                  
+{txt}Sorted by: 
+
+{com}. exit, clear
