@@ -1,0 +1,68 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Sector of Employment (10-39 years post PhD) \label{tab1}}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+  &\multicolumn{1}{c}{ANYACADEMIA}&\multicolumn{1}{c}{Tenure}&\multicolumn{1}{c}{TTNOTTEN}&\multicolumn{1}{c}{EDUNTT}&\multicolumn{1}{c}{INDSECTOR}&\multicolumn{1}{c}{GOVSECTOR}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&      0.0146         &     0.00347         &     0.00287         &    -0.00931         &    -0.00962         &    -0.00446         \\
+  &     (0.013)         &    (0.0052)         &     (0.011)         &     (0.013)         &     (0.013)         &    (0.0089)         \\
+[1em]
+2: BA&      0.0135         &     0.00368         &      0.0174         &    -0.00769         &     -0.0145         &     0.00493         \\
+  &     (0.013)         &    (0.0060)         &     (0.012)         &     (0.014)         &     (0.014)         &    (0.0097)         \\
+[1em]
+4: PhD&     0.00486         &     0.00311         &    -0.00149         &     0.00470         &    -0.00662         &    -0.00838         \\
+  &     (0.011)         &    (0.0052)         &    (0.0091)         &     (0.011)         &     (0.011)         &    (0.0075)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     &                     \\
+[1em]
+Female&    -0.00389         &     0.00409         &    -0.00595         &    -0.00218         &    -0.00413         &     0.00666         \\
+  &    (0.0078)         &    (0.0041)         &    (0.0065)         &    (0.0079)         &    (0.0080)         &    (0.0054)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&      0.0101         &     0.00203         &    0.000120         &      0.0128         &     0.00394         &     -0.0106         \\
+  &    (0.0096)         &    (0.0046)         &    (0.0081)         &    (0.0099)         &    (0.0100)         &    (0.0065)         \\
+[1em]
+Black, Non-Hispanic&      0.0342         &     0.00240         &    -0.00106         &      0.0180         &     -0.0356         &    -0.00820         \\
+  &     (0.022)         &    (0.0084)         &     (0.019)         &     (0.023)         &     (0.023)         &     (0.016)         \\
+[1em]
+Hispanic, All Races&      0.0164         &    -0.00581         &      0.0247         &    -0.00180         &     -0.0157         &     -0.0198\sym{*}  \\
+  &     (0.018)         &    (0.0064)         &     (0.016)         &     (0.018)         &     (0.018)         &     (0.012)         \\
+[1em]
+Other, Non-Hispanic&     -0.0131         &      0.0107         &     -0.0518\sym{*}  &      0.0475         &     -0.0137         &     -0.0114         \\
+  &     (0.039)         &     (0.014)         &     (0.028)         &     (0.040)         &     (0.039)         &     (0.027)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+years\_since\_phd5y&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.69         &        0.65         &        0.18         &        0.32         &        0.34         &        0.12         \\
+Observations&      93,446         &      93,446         &      93,446         &      93,446         &      93,446         &      93,446         \\
+Clusters&      10,957         &      10,957         &      10,957         &      10,957         &      10,957         &      10,957         \\
+R-Squared&     0.00097         &     0.00038         &      0.0027         &      0.0021         &      0.0017         &      0.0018         \\
+Adjusted R-Squared&     0.00062         &    0.000039         &      0.0023         &      0.0018         &      0.0013         &      0.0014         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&          25         &          25         &          25         &          25         &          25         &          25         \\
+Residual Degrees of Freedom&      10,956         &      10,956         &      10,956         &      10,956         &      10,956         &      10,956         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Condition: if years\_since\_phd is less than 40 and years\_since\_phd is greater than or equal to 10 and LOCATIONUS equals 1 and LFSTAT equal 1}\\
+\multicolumn{7}{l}{\footnotesize Fixed Effects: YR PHDFIELDNEW PHDINST PHDCY5y years\_since\_phd5y BIRTHCOUNTRY}\\
+\multicolumn{7}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{7}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{7}{l}{\footnotesize DVs are binary variables taking the value of 1 to indicate working in specified sector.}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

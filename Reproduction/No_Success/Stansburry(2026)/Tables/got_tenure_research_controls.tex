@@ -1,0 +1,75 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Likelihood of Getting Tenure with research controls \label{tab1}}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+  &\multicolumn{1}{c}{Got Tenure}&\multicolumn{1}{c}{Got Tenure}&\multicolumn{1}{c}{Got Tenure}&\multicolumn{1}{c}{Got Tenure}&\multicolumn{1}{c}{Got Tenure}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&       0.422\sym{***}&       0.408\sym{***}&      -0.277         &       0.146         &      0.0659         \\
+  &      (0.11)         &      (0.15)         &      (0.48)         &      (0.11)         &      (3.66)         \\
+[1em]
+2: BA&       0.152         &       0.188         &       0.172         &       0.329\sym{*}  &     -0.0994         \\
+  &      (0.14)         &      (0.21)         &      (0.64)         &      (0.17)         &      (1.03)         \\
+[1em]
+4: PhD&       0.177         &      -0.540\sym{***}&      -1.441\sym{**} &      -0.192         &      -1.993         \\
+  &      (0.18)         &      (0.15)         &      (0.57)         &      (0.13)         &      (2.01)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     \\
+[1em]
+Female&     -0.0740         &    -0.00482         &     -0.0591         &      -0.303\sym{***}&      -0.602         \\
+  &     (0.081)         &     (0.090)         &      (0.45)         &      (0.11)         &      (2.48)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&       0.276         &      0.0136         &      -0.224         &       0.242\sym{*}  &      -2.849         \\
+  &      (0.19)         &      (0.11)         &      (0.51)         &      (0.13)         &      (3.58)         \\
+[1em]
+Black, Non-Hispanic&       0.114         &      -0.676\sym{***}&      -0.837         &      -0.577\sym{**} &      -0.484         \\
+  &      (0.21)         &      (0.22)         &      (0.55)         &      (0.23)         &      (3.12)         \\
+[1em]
+Hispanic, All Races&       0.252         &       0.359\sym{***}&     -0.0581         &       0.623\sym{***}&      -4.301         \\
+  &      (0.22)         &      (0.12)         &      (0.39)         &      (0.15)         &      (3.37)         \\
+[1em]
+Other, Non-Hispanic&  -0.0000808         &      -0.127         &      -0.147         &       0.189         &      -3.594         \\
+  &      (0.17)         &      (0.11)         &      (0.46)         &      (0.16)         &      (4.88)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Current Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+BIRTHCOUNTRY&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PHD\_CAT&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Research Controls 1&          No         &         Yes         &          No         &          No         &          No         \\
+Research Controls 2&          No         &          No         &         Yes         &          No         &          No         \\
+Research Controls 3&          No         &          No         &          No         &         Yes         &          No         \\
+Research Controls 4&          No         &          No         &          No         &          No         &         Yes         \\
+Dep Var Mean&        0.47         &        0.47         &        0.47         &        0.47         &        0.47         \\
+Observations&         752         &         752         &         752         &         752         &         752         \\
+R-Squared&        0.51         &        0.77         &        0.82         &        0.76         &        0.82         \\
+Adjusted R-Squared&        0.47         &        0.74         &        0.79         &        0.74         &        0.80         \\
+Controls Degrees of Freedom&           9         &          35         &          59         &          35         &          59         \\
+Absorbed Degrees of Freedom&          43         &          43         &          43         &          43         &          43         \\
+Residual Degrees of Freedom&          92         &          92         &          92         &          92         &          92         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize Condition: if flag\_decisionyr equals 1 and not missing GOT\_TENURE\_NEXTYR and YR is greater than}\\
+\multicolumn{6}{l}{\footnotesize or equal to 1997 and not missing INSTCOD and not missing pubs and YR equals maxdecisionyr}\\
+\multicolumn{6}{l}{\footnotesize and num\_GOT\_TENURE\_NEXTYR is greater than or equal to 5 and not missing FULLRANK}\\
+\multicolumn{6}{l}{\footnotesize and t\_TENURE\_NEXTYR is greater than or equal to 5}\\
+\multicolumn{6}{l}{\footnotesize Fixed Effects: YR PHDCY5y years\_since\_phd5y BIRTHCOUNTRY INSTCOD PHD\_CAT}\\
+\multicolumn{6}{l}{\footnotesize Standard Error: vce(cluster INSTFIELDYR)}\\
+\multicolumn{6}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{6}{l}{\footnotesize Each research control variable incdicates different combinations of research controls interacted with PhD field group.}\\
+\multicolumn{6}{l}{\footnotesize Includes only individuals who have INSTCOD.}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

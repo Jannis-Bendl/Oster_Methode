@@ -1,0 +1,71 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Tenure Institution Type - Robustness Check (Different DVs) \label{tab1}}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+  &\multicolumn{1}{c}{Research}&\multicolumn{1}{c}{R1 or R2}&\multicolumn{1}{c}{Top 50}&\multicolumn{1}{c}{Top 50 (Any)}&\multicolumn{1}{c}{Rank Group}&\multicolumn{1}{c}{Rank}&\multicolumn{1}{c}{BA Rank}&\multicolumn{1}{c}{Log BA Rank}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&      0.0166         &      0.0144         &    0.000891         &     0.00229         &      -0.102         &     -0.0962         &      -0.351         &    -0.00782         \\
+  &     (0.012)         &     (0.011)         &    (0.0058)         &    (0.0065)         &      (0.70)         &      (0.71)         &      (0.23)         &     (0.015)         \\
+[1em]
+2: BA&    -0.00494         &    -0.00218         &    -0.00382         &    -0.00184         &      -1.598\sym{**} &      -1.656\sym{**} &      -0.120         &     0.00603         \\
+  &     (0.012)         &     (0.012)         &    (0.0067)         &    (0.0074)         &      (0.80)         &      (0.81)         &      (0.26)         &     (0.017)         \\
+[1em]
+4: PhD&     0.00241         &     0.00201         &    0.000214         &    -0.00299         &      -0.228         &      -0.280         &      -0.256         &     -0.0157         \\
+  &    (0.0099)         &    (0.0097)         &    (0.0056)         &    (0.0063)         &      (0.69)         &      (0.70)         &      (0.21)         &     (0.014)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     &                     &                     &                     \\
+[1em]
+Female&    0.000814         &    0.000348         &    -0.00122         &    -0.00160         &       0.632         &       0.687         &       0.265         &     0.00453         \\
+  &    (0.0071)         &    (0.0069)         &    (0.0045)         &    (0.0050)         &      (0.54)         &      (0.55)         &      (0.17)         &     (0.011)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&    -0.00538         &    -0.00621         &     0.00277         &     0.00778         &      -0.151         &      -0.196         &    -0.00946         &    -0.00718         \\
+  &    (0.0089)         &    (0.0085)         &    (0.0051)         &    (0.0057)         &      (0.63)         &      (0.63)         &      (0.20)         &     (0.013)         \\
+[1em]
+Black, Non-Hispanic&     0.00683         &     0.00374         &    -0.00171         &      0.0125         &       1.158         &       1.178         &      -0.361         &     -0.0298         \\
+  &     (0.020)         &     (0.020)         &    (0.0088)         &     (0.010)         &      (1.05)         &      (1.06)         &      (0.39)         &     (0.025)         \\
+[1em]
+Hispanic, All Races&     -0.0101         &    -0.00814         &     0.00408         &     0.00226         &      -0.924         &      -0.939         &      -0.367         &     -0.0204         \\
+  &     (0.015)         &     (0.015)         &    (0.0072)         &    (0.0077)         &      (0.84)         &      (0.85)         &      (0.29)         &     (0.018)         \\
+[1em]
+Other, Non-Hispanic&      0.0270         &      0.0162         &    -0.00402         &     0.00759         &      -1.800         &      -1.852         &       0.918\sym{**} &      0.0641\sym{**} \\
+  &     (0.036)         &     (0.034)         &     (0.015)         &     (0.019)         &      (1.74)         &      (1.76)         &      (0.46)         &     (0.033)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5 Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5 Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.20         &        0.19         &        0.20         &        0.34         &       -67.1         &       -70.5         &       -5.58         &       -0.38         \\
+Observations&      62,802         &      62,802         &      53,052         &      55,980         &      62,802         &      62,802         &      62,802         &      62,802         \\
+Clusters&       9,773         &       9,773         &       9,037         &       9,246         &       9,773         &       9,773         &       9,773         &       9,773         \\
+R-Squared&      0.0069         &      0.0085         &     0.00077         &        0.11         &     0.00099         &     0.00099         &     0.00098         &     0.00088         \\
+Adjusted R-Squared&      0.0064         &      0.0080         &     0.00021         &        0.11         &     0.00048         &     0.00048         &     0.00047         &     0.00037         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&          25         &          25         &          23         &          25         &          25         &          25         &          25         &          25         \\
+Residual Degrees of Freedom&       9,772         &       9,772         &       9,036         &       9,245         &       9,772         &       9,772         &       9,772         &       9,772         \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{9}{l}{\footnotesize Condition: if TENURE equals 1 and LOCATIONUS equals 1 and years\_since\_phd is greater than or}\\
+\multicolumn{9}{l}{\footnotesize equal to 10 and years\_since\_phd is less than 40}\\
+\multicolumn{9}{l}{\footnotesize Fixed Effects: YR PHDCY5y years\_since\_phd5y PHDFIELDNEW PHDINST BIRTHCOUNTRY}\\
+\multicolumn{9}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{9}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{9}{l}{\footnotesize New DVs: TEN\_RESEARCH (Tenure Research - Binary) TEN\_R1R2}\\
+\multicolumn{9}{l}{\footnotesize (Tenure R1 or R2 - Binary) TEN\_TOP50ANY (Tenure Any Top 50 Rank - Binary) TEN\_TOP20}\\
+\multicolumn{9}{l}{\footnotesize (Tenure Top 20 - Binary) TENFULLRANK (Tenure FULLRANK) TENBAFULLRANK (Tenure BA FULLRANK)}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

@@ -1,0 +1,68 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Main Outcomes, Non-US-born Only: Tenure Likelihood, Tenure Institution Type, Earnings, and Job Satisfaction \label{tab1}}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+  &\multicolumn{1}{c}{Tenure}&\multicolumn{1}{c}{R1}&\multicolumn{1}{c}{Log Rank}&\multicolumn{1}{c}{Log Earnings}&\multicolumn{1}{c}{Job Satisfaction}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&     0.00807         &     0.00934         &     0.00105         &    -0.00307         &      0.0696         \\
+  &    (0.0081)         &    (0.0077)         &     (0.032)         &     (0.017)         &     (0.053)         \\
+[1em]
+2: BA&     0.00848         &    -0.00234         &     -0.0510         &    0.000485         &      0.0277         \\
+  &    (0.0095)         &    (0.0089)         &     (0.038)         &     (0.022)         &     (0.060)         \\
+[1em]
+4: PhD&    0.000421         &   -0.000528         &     -0.0311         &    -0.00464         &     -0.0598         \\
+  &    (0.0082)         &    (0.0076)         &     (0.033)         &     (0.018)         &     (0.053)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     \\
+[1em]
+Female&    -0.00101         &    -0.00408         &      0.0477\sym{*}  &     0.00925         &      0.0221         \\
+  &    (0.0068)         &    (0.0063)         &     (0.027)         &     (0.015)         &     (0.045)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&     0.00809         &    -0.00581         &     -0.0505         &      0.0173         &     0.00504         \\
+  &    (0.0090)         &    (0.0080)         &     (0.034)         &     (0.021)         &     (0.060)         \\
+[1em]
+Black, Non-Hispanic&      0.0155         &     0.00283         &      0.0433         &      0.0295         &     -0.0160         \\
+  &     (0.013)         &     (0.012)         &     (0.049)         &     (0.027)         &     (0.086)         \\
+[1em]
+Hispanic, All Races&    -0.00340         &   -0.000722         &     0.00157         &      0.0155         &     -0.0128         \\
+  &    (0.0094)         &    (0.0097)         &     (0.041)         &     (0.022)         &     (0.064)         \\
+[1em]
+Other, Non-Hispanic&    -0.00404         &      0.0435         &      0.0416         &      0.0308         &       0.124         \\
+  &     (0.023)         &     (0.027)         &     (0.080)         &     (0.041)         &      (0.15)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.64         &       0.088         &       -3.47         &        7.12         &       -1.94         \\
+Observations&      37,392         &      25,004         &      25,004         &      19,281         &      23,984         \\
+Clusters&       8,434         &       7,949         &       7,949         &       7,694         &       7,627         \\
+R-Squared&      0.0015         &      0.0024         &      0.0024         &       0.083         &      0.0027         \\
+Adjusted R-Squared&     0.00063         &      0.0011         &      0.0011         &       0.082         &      0.0013         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&          25         &          25         &          25         &          25         &          25         \\
+Residual Degrees of Freedom&       8,433         &       7,948         &       7,948         &       7,693         &       7,626         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize Condition: if years\_since\_phd greater than or equal to 10 and years\_since\_phd less than 40 and LFSTAT}\\
+\multicolumn{6}{l}{\footnotesize equals 1 (for Tenure) OR TENURE equals 1 (for all other outcomes) and LOCATIONUS equals 1 and bornus equals 0}\\
+\multicolumn{6}{l}{\footnotesize Fixed Effects: YR PHDFIELDNEW PHDINST PHDCY5y years\_since\_phd5y BIRTHCOUNTRY}\\
+\multicolumn{6}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{6}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

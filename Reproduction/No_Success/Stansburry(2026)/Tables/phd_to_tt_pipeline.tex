@@ -1,0 +1,68 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Main Outcomes: Tenure Likelihood, Tenure Institution Type, Earnings, and Job Satisfaction \label{tab1}}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+  &\multicolumn{1}{c}{Tenuretrack}&\multicolumn{1}{c}{R1}&\multicolumn{1}{c}{Log Rank}\\
+\hline
+ref: Grad Degree&                     &                     &                     \\
+[1em]
+1: No BA&      0.0285         &     -0.0349         &      0.0342         \\
+  &     (0.030)         &     (0.036)         &     (0.048)         \\
+[1em]
+2: BA&      0.0184         &      0.0507         &     -0.0116         \\
+  &     (0.031)         &     (0.036)         &     (0.053)         \\
+[1em]
+4: PhD&    0.000582         &     0.00784         &    -0.00102         \\
+  &     (0.025)         &     (0.031)         &     (0.047)         \\
+[1em]
+ref: Male&                     &                     &                     \\
+[1em]
+Female&      0.0439\sym{**} &      0.0188         &      0.0124         \\
+  &     (0.018)         &     (0.023)         &     (0.035)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&      0.0268         &     0.00923         &      0.0595         \\
+  &     (0.024)         &     (0.031)         &     (0.043)         \\
+[1em]
+Black, Non-Hispanic&     0.00859         &     -0.0265         &     -0.0394         \\
+  &     (0.047)         &     (0.053)         &     (0.057)         \\
+[1em]
+Hispanic, All Races&   -0.000124         &     -0.0464         &     -0.0454         \\
+  &     (0.040)         &     (0.050)         &     (0.052)         \\
+[1em]
+Other, Non-Hispanic&      0.0414         &      -0.135         &     0.00924         \\
+  &     (0.087)         &      (0.11)         &      (0.12)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.36         &        0.62         &       -3.84         \\
+Observations&      17,849         &       6,360         &       6,360         \\
+Clusters&       2,872         &       1,028         &       1,028         \\
+R-Squared&       0.025         &        0.12         &       0.059         \\
+Adjusted R-Squared&       0.010         &       0.079         &       0.020         \\
+Controls Degrees of Freedom&           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&         249         &         249         &         249         \\
+Residual Degrees of Freedom&       2,871         &       1,027         &       1,027         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{4}{l}{\footnotesize Condition: if years\_since\_phd less than or equal to 9}\\
+\multicolumn{4}{l}{\footnotesize equals 1 (for TTRACK) OR TENURETRACK equals 1 (for all other outcomes) and LOCATIONUS equals 1}\\
+\multicolumn{4}{l}{\footnotesize Fixed Effects: YR PHDFIELDNEW PHDINST PHDCY5y years\_since\_phd5y BIRTHCOUNTRY}\\
+\multicolumn{4}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{4}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

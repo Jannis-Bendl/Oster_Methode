@@ -1,0 +1,29 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    &\multicolumn{1}{c}{monday\_flag}&\multicolumn{1}{c}{monday\_flag}&\multicolumn{1}{c}{monday\_flag}&\multicolumn{1}{c}{monday\_flag}&\multicolumn{1}{c}{Monday\_1877}&\multicolumn{1}{c}{Monday\_1877}\\
+\hline
+Every day           &       0.185\sym{**} &                     &       0.163\sym{**} &                     &    2016.469\sym{***}&                     \\
+                    &     (0.060)         &                     &     (0.059)         &                     &   (238.713)         &                     \\
+[1em]
+Several days        &       0.205\sym{***}&                     &       0.197\sym{***}&                     &     151.977         &                     \\
+                    &     (0.052)         &                     &     (0.052)         &                     &    (88.840)         &                     \\
+[1em]
+Conservative        &                     &       0.086         &       0.072         &      -0.022         &     188.057         &    -180.401         \\
+                    &                     &     (0.045)         &     (0.046)         &     (0.042)         &    (97.965)         &   (147.558)         \\
+[1em]
+Liberal             &                     &       0.108\sym{*}  &       0.092\sym{*}  &                     &     159.350         &                     \\
+                    &                     &     (0.043)         &     (0.043)         &                     &    (93.679)         &                     \\
+[1em]
+Independent         &                     &      -0.015         &      -0.009         &                     &     102.078         &                     \\
+                    &                     &     (0.047)         &     (0.048)         &                     &    (97.599)         &                     \\
+\hline
+Observations        &         887         &         887         &         887         &         530         &         297         &         200         \\
+R-Squared           &       0.028         &       0.012         &       0.036         &       0.001         &       0.510         &       0.007         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

@@ -1,0 +1,75 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{LOGRANK with Research Controls \label{tab1}}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+  &Tenure Log Rank         &Tenure Log Rank         &Tenure Log Rank         &Tenure Log Rank         &Tenure Log Rank         \\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&     -0.0945         &     -0.0448         &      -0.329         &     -0.0832         &      -0.225         \\
+  &      (0.13)         &      (0.18)         &      (0.23)         &      (0.18)         &      (0.31)         \\
+[1em]
+2: BA&      -0.241         &      -0.177         &      -0.328         &      -0.145         &      -0.247         \\
+  &      (0.21)         &      (0.25)         &      (0.38)         &      (0.26)         &      (0.51)         \\
+[1em]
+4: PhD&     -0.0741         &     -0.0377         &      -0.108         &     0.00339         &       0.381         \\
+  &      (0.17)         &      (0.19)         &      (0.31)         &      (0.22)         &      (0.43)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     \\
+[1em]
+Female&     -0.0135         &     -0.0275         &       0.121         &     -0.0748         &      -0.102         \\
+  &      (0.12)         &      (0.17)         &      (0.25)         &      (0.17)         &      (0.28)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&      -0.395\sym{**} &      -0.325\sym{*}  &      -0.253         &      -0.378\sym{*}  &      -0.258         \\
+  &      (0.16)         &      (0.18)         &      (0.29)         &      (0.21)         &      (0.39)         \\
+[1em]
+Black, Non-Hispanic&       0.384         &       0.170         &     -0.0551         &     -0.0953         &       0.137         \\
+  &      (0.27)         &      (0.32)         &      (0.53)         &      (0.36)         &      (0.60)         \\
+[1em]
+Hispanic, All Races&       0.163         &       0.601\sym{**} &      -0.167         &       0.551\sym{*}  &       0.285         \\
+  &      (0.23)         &      (0.29)         &      (0.43)         &      (0.29)         &      (0.46)         \\
+[1em]
+Other, Non-Hispanic&      -0.418         &      -0.236         &      -0.773         &      -0.420         &      -1.994\sym{*}  \\
+  &      (0.49)         &      (0.55)         &      (0.91)         &      (0.59)         &      (1.04)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Research Controls 1&          No         &         Yes         &          No         &          No         &          No         \\
+Research Controls 2&          No         &          No         &         Yes         &          No         &          No         \\
+Research Controls 3&          No         &          No         &          No         &         Yes         &          No         \\
+Research Controls 4&          No         &          No         &          No         &          No         &         Yes         \\
+Dep Var Mean&       -3.60         &       -3.60         &       -3.60         &       -3.63         &       -3.63         \\
+Observations&       1,003         &       1,003         &       1,003         &         926         &         926         \\
+R-Squared&        0.67         &        0.78         &        0.92         &        0.77         &        0.92         \\
+Adjusted R-Squared&        0.31         &        0.37         &        0.45         &        0.33         &        0.37         \\
+Controls Degrees of Freedom&           8         &         142         &         337         &         112         &         306         \\
+Absorbed Degrees of Freedom&         513         &         513         &         513         &         500         &         500         \\
+Residual Degrees of Freedom&          50         &          50         &          50         &          50         &          50         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize Condition: if LFSTAT equals 1 and LOCATIONUS equals 1 and years\_since\_phd is greater than or}\\
+\multicolumn{6}{l}{\footnotesize equal to 10 and years\_since\_phd is less than 40}\\
+\multicolumn{6}{l}{\footnotesize Fixed Effects: YR PHDFIELDNEW PHDINST PHDCY5y years\_since\_phd5y BIRTHCOUNTRY}\\
+\multicolumn{6}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{6}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{6}{l}{\footnotesize The regressions in this table take our baseline regressions and limit the sample to individuals with tenure.}\\
+\multicolumn{6}{l}{\footnotesize Each dependent variable investigates the type of insitution the individuals are tenured at,}\\
+\multicolumn{6}{l}{\footnotesize conditional on different research controls at the time of the survey.}\\
+\multicolumn{6}{l}{\footnotesize Each research control variable incdicates different combinations of research controls interacted with PhD field group.}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

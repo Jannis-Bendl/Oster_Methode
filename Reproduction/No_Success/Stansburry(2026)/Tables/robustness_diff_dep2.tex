@@ -1,0 +1,56 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Tenure Institution Type - Robustness Check (Different DVs) \label{tab1}}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+  &\multicolumn{1}{c}{Top 10}&\multicolumn{1}{c}{11-25}&\multicolumn{1}{c}{26-50}&\multicolumn{1}{c}{51-100}&\multicolumn{1}{c}{101+}&\multicolumn{1}{c}{Non-ranked}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&  0.00000223         &  -0.0000919         &  -0.0000291         &   0.0000306         &  -0.0000159         &   -0.000154         \\
+  & (0.0000027)         &  (0.000089)         &   (0.00012)         &  (0.000031)         &  (0.000049)         &   (0.00013)         \\
+[1em]
+2: BA&   0.0000994         &   0.0000556         &   -0.000112         & -0.00000390         &  -0.0000435         &  0.00000965         \\
+  &  (0.000099)         &   (0.00017)         &  (0.000093)         & (0.0000037)         &  (0.000043)         & (0.0000099)         \\
+[1em]
+4: PhD&   0.0000467         &  -0.0000589         &   -0.000110         &   0.0000501         &  -0.0000436         &   -0.000142         \\
+  &  (0.000045)         &  (0.000094)         &  (0.000090)         &  (0.000051)         &  (0.000044)         &   (0.00012)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     &                     \\
+[1em]
+Female&  -0.0000430         &  -0.0000974         &   0.0000227         &-0.000000411         &  -0.0000331         & -0.00000686         \\
+  &  (0.000031)         &  (0.000061)         &  (0.000074)         &  (0.000029)         &  (0.000025)         &   (0.00010)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&  -0.0000503         &  -0.0000503         &    0.000102         &  -0.0000251         &  -0.0000385         &   0.0000686         \\
+  &  (0.000036)         &  (0.000051)         &   (0.00012)         &  (0.000025)         &  (0.000029)         &  (0.000062)         \\
+[1em]
+Black, Non-Hispanic&  -0.0000506         &  -0.0000521         &  -0.0000302         &   0.0000939         &  -0.0000360         &   -0.000528         \\
+  &  (0.000036)         &  (0.000057)         &  (0.000036)         &   (0.00012)         &  (0.000027)         &   (0.00049)         \\
+[1em]
+Hispanic, All Races&  -0.0000517         &    0.000153         &  -0.0000376         &  -0.0000263         &  -0.0000406         &   0.0000731         \\
+  &  (0.000037)         &   (0.00022)         &  (0.000037)         &  (0.000027)         &  (0.000030)         &  (0.000062)         \\
+[1em]
+Other, Non-Hispanic&  -0.0000588         &    0.000329         &  -0.0000263         &  -0.0000243         &  -0.0000423         &   0.0000647         \\
+  &  (0.000042)         &   (0.00040)         &  (0.000038)         &  (0.000027)         &  (0.000031)         &  (0.000057)         \\
+\hline
+Dep Var Mean&    0.000028         &    0.000061         &    0.000056         &    0.000021         &    0.000021         &        1.00         \\
+Observations&      62,802         &      62,802         &      62,802         &      62,802         &      62,802         &      62,802         \\
+Clusters&       9,773         &       9,773         &       9,773         &       9,773         &       9,773         &       9,773         \\
+R-Squared&     0.00057         &      0.0012         &      0.0011         &     0.00051         &     0.00035         &      0.0015         \\
+Adjusted R-Squared&    0.000059         &     0.00073         &     0.00063         &   0.0000030         &    -0.00016         &     0.00100         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&          25         &          25         &          25         &          25         &          25         &          25         \\
+Residual Degrees of Freedom&       9,772         &       9,772         &       9,772         &       9,772         &       9,772         &       9,772         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{7}{l}{\footnotesize Condition: if TENURE equals 1 and LOCATIONUS equals 1 and years\_since\_phd is greater than or}\\
+\multicolumn{7}{l}{\footnotesize equal to 10 and years\_since\_phd is less than 40}\\
+\multicolumn{7}{l}{\footnotesize Fixed Effects: YR PHDCY5y years\_since\_phd5y PHDFIELDNEW PHDINST BIRTHCOUNTRY}\\
+\multicolumn{7}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{7}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

@@ -1,0 +1,68 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Importance of Factor in Job - ALL \label{tab1}}
+\begin{tabular}{l*{9}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}&\multicolumn{1}{c}{(9)}\\
+  &\multicolumn{1}{c}{Salary}&\multicolumn{1}{c}{Benefits}&\multicolumn{1}{c}{Security}&\multicolumn{1}{c}{Location}&\multicolumn{1}{c}{Advancement}&\multicolumn{1}{c}{Challenge}&\multicolumn{1}{c}{Responsibility}&\multicolumn{1}{c}{Independence}&\multicolumn{1}{c}{Society}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&      0.0302         &     0.00216         &      0.0108         &      0.0412         &     -0.0355         &     -0.0141         &     -0.0181         &    -0.00910         &     -0.0335         \\
+  &     (0.029)         &     (0.029)         &     (0.029)         &     (0.029)         &     (0.029)         &     (0.029)         &     (0.029)         &     (0.029)         &     (0.029)         \\
+[1em]
+2: BA&      0.0431         &     -0.0168         &     -0.0180         &      0.0434         &      0.0240         &     -0.0561\sym{*}  &     -0.0417         &     -0.0354         &     -0.0369         \\
+  &     (0.030)         &     (0.031)         &     (0.031)         &     (0.030)         &     (0.030)         &     (0.030)         &     (0.030)         &     (0.030)         &     (0.031)         \\
+[1em]
+4: PhD&    -0.00605         &    0.000774         &    -0.00978         &      0.0285         &     -0.0246         &      0.0101         &     0.00840         &     -0.0198         &     0.00829         \\
+  &     (0.025)         &     (0.025)         &     (0.025)         &     (0.025)         &     (0.025)         &     (0.025)         &     (0.025)         &     (0.025)         &     (0.025)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     &                     &                     &                     &                     \\
+[1em]
+Female&     -0.0100         &    -0.00928         &   -0.000888         &    -0.00906         &     -0.0152         &      0.0163         &     -0.0120         &    -0.00303         &     -0.0218         \\
+  &     (0.018)         &     (0.018)         &     (0.018)         &     (0.018)         &     (0.018)         &     (0.018)         &     (0.018)         &     (0.018)         &     (0.018)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     &                     &                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&    -0.00932         &     0.00304         &     0.00759         &      0.0130         &     -0.0177         &    -0.00169         &      0.0105         &     0.00252         &     0.00421         \\
+  &     (0.022)         &     (0.022)         &     (0.022)         &     (0.022)         &     (0.022)         &     (0.022)         &     (0.022)         &     (0.022)         &     (0.022)         \\
+[1em]
+Black, Non-Hispanic&      0.0383         &     -0.0222         &      0.0138         &     -0.0405         &     -0.0221         &      0.0283         &      0.0287         &     0.00554         &      0.0720         \\
+  &     (0.050)         &     (0.052)         &     (0.052)         &     (0.052)         &     (0.051)         &     (0.052)         &     (0.053)         &     (0.052)         &     (0.051)         \\
+[1em]
+Hispanic, All Races&     -0.0144         &     -0.0111         &    -0.00711         &      0.0728\sym{*}  &     -0.0213         &      0.0531         &     -0.0292         &     -0.0349         &     -0.0192         \\
+  &     (0.040)         &     (0.040)         &     (0.041)         &     (0.041)         &     (0.040)         &     (0.041)         &     (0.040)         &     (0.040)         &     (0.040)         \\
+[1em]
+Other, Non-Hispanic&       0.175\sym{*}  &      0.0325         &      0.0617         &     -0.0593         &     -0.0524         &      0.0103         &     -0.0363         &      0.0683         &      0.0131         \\
+  &     (0.091)         &     (0.086)         &     (0.089)         &     (0.084)         &     (0.087)         &     (0.090)         &     (0.086)         &     (0.089)         &     (0.089)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+BIRTHCOUNTRY&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&       -2.50         &       -2.48         &       -2.50         &       -2.50         &       -2.51         &       -2.50         &       -2.52         &       -2.47         &       -2.49         \\
+Observations&     105,155         &     105,677         &     105,971         &     106,094         &     105,934         &     106,317         &     105,561         &     105,750         &     105,325         \\
+Clusters&      12,187         &      12,245         &      12,273         &      12,262         &      12,243         &      12,293         &      12,199         &      12,250         &      12,171         \\
+R-Squared&      0.0051         &      0.0055         &      0.0039         &      0.0060         &      0.0049         &      0.0059         &      0.0044         &      0.0053         &      0.0057         \\
+Adjusted R-Squared&      0.0027         &      0.0030         &      0.0014         &      0.0036         &      0.0024         &      0.0035         &      0.0019         &      0.0028         &      0.0032         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&         253         &         253         &         253         &         253         &         253         &         253         &         253         &         253         &         253         \\
+Residual Degrees of Freedom&      12,186         &      12,244         &      12,272         &      12,261         &      12,242         &      12,292         &      12,198         &      12,249         &      12,170         \\
+\hline\hline
+\multicolumn{10}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{10}{l}{\footnotesize Condition: if years\_since\_phd less than 40 and LOCATIONUS equals 1 and ALL equals 1}\\
+\multicolumn{10}{l}{\footnotesize Fixed Effects: YR PHDCY5y years\_since\_phd5y PHDFIELDNEW PHDINST BIRTHCOUNTRY}\\
+\multicolumn{10}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{10}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{10}{l}{\footnotesize DVs are a four-point continuous scale where the highest number represents that the specific aspect of their current job is 'very important'.}\\
+\multicolumn{10}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

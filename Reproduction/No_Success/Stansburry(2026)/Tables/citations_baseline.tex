@@ -1,0 +1,52 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Citations per publication}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+  &\multicolumn{1}{c}{Any Cites}&\multicolumn{1}{c}{(Log Cites(5y))}&\multicolumn{1}{c}{Log(1+Cites(5y))}&\multicolumn{1}{c}{Log(CNCI)}&\multicolumn{1}{c}{Log(1+CNCI)}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&    0.000386         &     0.00575         &     0.00357         &    -0.00116         &    -0.00674         \\
+  &    (0.0021)         &     (0.015)         &     (0.012)         &     (0.024)         &     (0.046)         \\
+[1em]
+2: BA&     0.00256         &    -0.00560         &    -0.00296         &     -0.0846\sym{***}&      0.0110         \\
+  &    (0.0021)         &     (0.017)         &     (0.014)         &     (0.030)         &     (0.051)         \\
+[1em]
+4: PhD&     0.00210         &     -0.0186         &     -0.0126         &    -0.00388         &      0.0840\sym{**} \\
+  &    (0.0020)         &     (0.015)         &     (0.012)         &     (0.023)         &     (0.042)         \\
+[1em]
+Female&     0.00241         &     0.00971         &      0.0117         &     -0.0343\sym{*}  &     -0.0165         \\
+  &    (0.0015)         &     (0.012)         &    (0.0095)         &     (0.019)         &     (0.035)         \\
+[1em]
+Asian, Non-Hispanic&     0.00127         &    -0.00773         &    -0.00466         &      0.0192         &    -0.00651         \\
+  &    (0.0018)         &     (0.013)         &     (0.010)         &     (0.022)         &     (0.041)         \\
+[1em]
+Black, Non-Hispanic&   -0.000810         &     0.00381         &     0.00203         &    0.000471         &    -0.00199         \\
+  &    (0.0031)         &     (0.023)         &     (0.018)         &     (0.037)         &     (0.068)         \\
+[1em]
+Hispanic, All Races&    -0.00151         &    -0.00475         &    -0.00450         &     -0.0216         &      -0.115\sym{*}  \\
+  &    (0.0028)         &     (0.018)         &     (0.014)         &     (0.031)         &     (0.059)         \\
+[1em]
+Other, Non-Hispanic&    -0.00565         &     -0.0300         &     -0.0288         &      0.0614         &      0.0978         \\
+  &    (0.0060)         &     (0.044)         &     (0.035)         &     (0.053)         &     (0.082)         \\
+\hline
+Dep Var Mean&        0.99         &        1.50         &        1.71         &      -0.098         &        4.05         \\
+Observations&      46,026         &      45,766         &      46,026         &      41,202         &      46,026         \\
+Clusters&       1,214         &       1,214         &       1,214         &       1,214         &       1,214         \\
+R-Squared&       0.055         &       0.066         &       0.065         &       0.067         &       0.054         \\
+Adjusted R-Squared&       0.044         &       0.055         &       0.054         &       0.055         &       0.043         \\
+Absorbed Degrees of Freedom&         526         &         526         &         526         &         526         &         526         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize Condition: TENURETRACK equals 1 and LOCATIONUS equals 1 and PUB\_YEAR is greater than or equal to 1997}\\
+\multicolumn{6}{l}{\footnotesize and INSTCOD\_miss does not equal 1 and PUB\_TYPE equals Article or Review and YR equals 2015}\\
+\multicolumn{6}{l}{\footnotesize Fixed Effects: PUB\_YEAR PUB\_HIGHIMPACTJOURNAL PUB\_LOWIMPACTJOURNAL PUB\_NUM\_AUTHORS\_b  PUB\_JCR\_RESEARCHFIELD\_A PUB\_JCR\_IMPACTFACTOR\_d\_BYCAT PUB\_TYPE}\\
+\multicolumn{6}{l}{\footnotesize BIRTHCOUNTRY SENIORITY5y INSTCOD PHDINST PHDFIELDNEW}\\
+\multicolumn{6}{l}{\footnotesize Controls: }\\
+\multicolumn{6}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{6}{l}{\footnotesize Weighted by .}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

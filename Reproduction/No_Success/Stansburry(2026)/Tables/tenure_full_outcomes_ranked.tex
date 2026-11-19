@@ -1,0 +1,63 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Likelihood of Position Next Year - Ranked Insitutions (Institution Controls)\label{tab2\_tenure}}
+\begin{tabular}{l*{7}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}\\
+  &\multicolumn{1}{c}{Tenure Similar or Higher Ranked}&\multicolumn{1}{c}{Tenure Elsewhere}&\multicolumn{1}{c}{Tenuretrack}&\multicolumn{1}{c}{Industry}&\multicolumn{1}{c}{Government}&\multicolumn{1}{c}{Education}&\multicolumn{1}{c}{Not Working}\\
+\hline
+1: No BA&       0.196         &      -0.122         &       0.303\sym{*}  &      -0.246\sym{***}&      -0.124         &      0.0769         &      -0.120         \\
+  &      (0.14)         &      (0.13)         &      (0.17)         &     (0.077)         &      (0.11)         &      (0.16)         &     (0.089)         \\
+[1em]
+2: BA&     -0.0629         &       0.376\sym{***}&      -0.125         &      -0.160\sym{**} &      -0.202\sym{*}  &     -0.0955         &     -0.0550         \\
+  &      (0.14)         &      (0.12)         &      (0.18)         &     (0.067)         &      (0.12)         &      (0.15)         &     (0.079)         \\
+[1em]
+4: PhD&      -0.186         &     -0.0746         &      -0.246         &     -0.0939         &      -0.114         &       0.193         &      -0.172\sym{**} \\
+  &      (0.16)         &      (0.16)         &      (0.19)         &     (0.072)         &      (0.11)         &      (0.16)         &     (0.076)         \\
+[1em]
+Female&       0.135         &       0.149\sym{*}  &       0.120         &     -0.0137         &     -0.0860         &     -0.0823         &    -0.00944         \\
+  &      (0.11)         &     (0.084)         &      (0.12)         &     (0.037)         &     (0.074)         &     (0.095)         &     (0.068)         \\
+[1em]
+Asian, Non-Hispanic&      0.0169         &      -0.249         &      -0.317         &      -0.225\sym{***}&      0.0101         &       0.419\sym{**} &      0.0988         \\
+  &      (0.19)         &      (0.17)         &      (0.19)         &     (0.082)         &      (0.12)         &      (0.20)         &      (0.10)         \\
+[1em]
+Black, Non-Hispanic&      -0.217         &      -0.102         &       0.159         &      -0.320\sym{***}&     -0.0959         &       0.365         &     -0.0854         \\
+  &      (0.22)         &      (0.18)         &      (0.21)         &     (0.092)         &      (0.14)         &      (0.24)         &      (0.12)         \\
+[1em]
+Hispanic, All Races&       0.238         &       0.180         &      -0.625\sym{***}&      -0.502\sym{***}&      -0.227         &       0.183         &       0.172         \\
+  &      (0.23)         &      (0.19)         &      (0.22)         &      (0.11)         &      (0.17)         &      (0.19)         &      (0.12)         \\
+[1em]
+Other, Non-Hispanic&      -0.152         &      -0.555\sym{***}&      -0.567\sym{***}&      -0.389\sym{***}&       0.102         &      0.0329         &       0.245\sym{**} \\
+  &      (0.20)         &      (0.17)         &      (0.18)         &     (0.084)         &      (0.14)         &      (0.18)         &      (0.11)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PHDCY5y&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+years\_since\_phd5y&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.44         &        0.27         &        0.38         &        0.11         &       0.090         &        0.17         &       0.098         \\
+Observations&         600         &         600         &         600         &         600         &         600         &         600         &         600         \\
+R-Squared&        0.57         &        0.79         &        0.72         &        0.92         &        0.57         &        0.65         &        0.80         \\
+Adjusted R-Squared&        0.54         &        0.77         &        0.70         &        0.91         &        0.54         &        0.62         &        0.78         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&          36         &          36         &          36         &          36         &          36         &          36         &          36         \\
+Residual Degrees of Freedom&          73         &          73         &          73         &          73         &          73         &          73         &          73         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{8}{l}{\footnotesize Condition: if flag\_decisionyr equals 1 and YR is greater than or equal to 1997 and not missing FULLRANK and}\\
+\multicolumn{8}{l}{\footnotesize YR equals maxdecisionyr and GOT\_TENURE\_NEXTYR is not missing and t\_GOT\_TENURE\_NEXTYR is greater than or equal to 5}\\
+\multicolumn{8}{l}{\footnotesize and t\_TENURE\_NEXTYR is greater than or equal to 5 and not missing INSTCOD}\\
+\multicolumn{8}{l}{\footnotesize Fixed Effects: YR PHDCY5y years\_since\_phd5y BIRTHCOUNTRY INSTCOD PHDFIELDNEW}\\
+\multicolumn{8}{l}{\footnotesize Standard Error: vce(cluster PHDPROGRAMYR)}\\
+\multicolumn{8}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{8}{l}{\footnotesize Individuals only in ranked insitutions.}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

@@ -1,0 +1,70 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{NSF Award Binary 2016-2020 with Research Controls \label{tab1}}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+  &2016-2020 NSF Award Binary         &2016-2020 NSF Award Binary         &2016-2020 NSF Award Binary         &2016-2020 NSF Award Binary         \\
+\hline
+ref: Grad Degree&                     &                     &                     &                     \\
+[1em]
+1: No BA&     0.00131         &     0.00114         &     0.00138         &     0.00138         \\
+  &    (0.0013)         &    (0.0011)         &    (0.0013)         &    (0.0013)         \\
+[1em]
+2: BA&    0.000231         &    0.000279         &    0.000452         &    0.000452         \\
+  &   (0.00024)         &   (0.00034)         &   (0.00050)         &   (0.00050)         \\
+[1em]
+4: PhD&    0.000488         &    0.000378         &    0.000768         &    0.000768         \\
+  &   (0.00049)         &   (0.00042)         &   (0.00075)         &   (0.00075)         \\
+[1em]
+ref: Male&                     &                     &                     &                     \\
+[1em]
+Female&   -0.000205         &   -0.000206         &   -0.000319         &   -0.000319         \\
+  &   (0.00021)         &   (0.00027)         &   (0.00037)         &   (0.00037)         \\
+[1em]
+ref: White Non-Hispanic&                     &                     &                     &                     \\
+[1em]
+Asian, Non-Hispanic&   0.0000207         &    0.000178         &  -0.0000956         &  -0.0000956         \\
+  &  (0.000057)         &   (0.00024)         &   (0.00022)         &   (0.00022)         \\
+[1em]
+Black, Non-Hispanic&    0.000158         &   -0.000458         &   -0.000302         &   -0.000302         \\
+  &   (0.00018)         &   (0.00060)         &   (0.00056)         &   (0.00056)         \\
+[1em]
+Hispanic, All Races&  -0.0000275         &    0.000156         &   0.0000628         &   0.0000628         \\
+  &  (0.000077)         &   (0.00032)         &   (0.00032)         &   (0.00032)         \\
+[1em]
+Other, Non-Hispanic&   -0.000107         &   -0.000279         &   0.0000452         &   0.0000452         \\
+  &   (0.00018)         &   (0.00045)         &   (0.00045)         &   (0.00045)         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Tenure Status FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Institution X Field FE&         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PHDINST&         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Baseline Research Controls&          No         &         Yes         &          No         &          No         \\
+Full Research Controls&          No         &          No         &         Yes         &          No         \\
+Full RC + Prior NSF Awards&          No         &          No         &          No         &         Yes         \\
+Dep Var Mean&     0.00030         &     0.00030         &     0.00030         &     0.00030         \\
+Observations&       4,150         &       4,148         &       4,148         &       4,148         \\
+R-Squared&        0.53         &        0.57         &        0.58         &        0.58         \\
+Adjusted R-Squared&        0.39         &        0.41         &        0.42         &        0.42         \\
+Controls Degrees of Freedom&           8         &         142         &         232         &         232         \\
+Absorbed Degrees of Freedom&          17         &          17         &          17         &          17         \\
+Residual Degrees of Freedom&         917         &         917         &         917         &         917         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize Condition: if YR is equal to 2015 and LOCATIONUS equals 1 and TENURETRACK or TENURE equals 1 and PHD\_CAT is not Economics or Health}\\
+\multicolumn{5}{l}{\footnotesize and INSTCOD\_miss does not equal 1. Merged with both NSF and publication-level data.}\\
+\multicolumn{5}{l}{\footnotesize Fixed Effects: PHDCY5y years\_since\_phd5y PHDINST BIRTHCOUNTRY INSTBYFIELD TENSTA}\\
+\multicolumn{5}{l}{\footnotesize Standard Error: cluster INSTFIELDYR}\\
+\multicolumn{5}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

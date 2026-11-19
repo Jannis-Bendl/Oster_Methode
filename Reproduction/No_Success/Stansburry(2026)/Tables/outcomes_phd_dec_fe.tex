@@ -1,0 +1,46 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Main Outcomes with PhD Program by Decade FE: Tenure Likelihood, Tenure Institution Type, Earnings, and Job Satisfaction \label{tab1}}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+  &\multicolumn{1}{c}{Tenure}&\multicolumn{1}{c}{R1}&\multicolumn{1}{c}{Log Rank}&\multicolumn{1}{c}{Log Earnings}&\multicolumn{1}{c}{Job Satisfaction}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&      0.0155         &    -0.00879         &     0.00717         &    0.000206         &      0.0122         \\
+  &     (0.012)         &     (0.014)         &     (0.029)         &     (0.015)         &     (0.028)         \\
+[1em]
+2: BA&      0.0119         &      0.0174         &     -0.0257         &     -0.0250         &     -0.0297         \\
+  &     (0.014)         &     (0.017)         &     (0.035)         &     (0.017)         &     (0.034)         \\
+[1em]
+4: PhD&      0.0179         &    -0.00230         &     0.00703         &     -0.0160         &      0.0107         \\
+  &     (0.012)         &     (0.014)         &     (0.029)         &     (0.014)         &     (0.029)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Program Decade FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.65         &        0.40         &       -3.01         &        7.00         &      -0.023         \\
+Observations&      17,663         &      13,554         &      13,554         &      13,552         &      13,530         \\
+Clusters&       2,478         &       2,216         &       2,216         &       2,214         &       2,193         \\
+R-Squared&       0.019         &       0.015         &       0.036         &       0.016         &       0.093         \\
+Adjusted R-Squared&      0.0048         &      0.0056         &       0.026         &      0.0063         &       0.084         \\
+Controls Degrees of Freedom&           8         &           8         &           8         &           8         &           8         \\
+Absorbed Degrees of Freedom&         251         &         127         &         127         &         126         &         116         \\
+Residual Degrees of Freedom&       2,477         &       2,215         &       2,215         &       2,213         &       2,192         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize Condition: if years\_since\_phd greater than or equal to 10 and years\_since\_phd less than 40 and LFSTAT}\\
+\multicolumn{6}{l}{\footnotesize equals 1 (for Tenure) OR TENURE equals 1 (for all other outcomes) and LOCATIONUS equals 1}\\
+\multicolumn{6}{l}{\footnotesize Fixed Effects: YR PHDPROGRAMDECADE years\_since\_phd5y BIRTHCOUNTRY}\\
+\multicolumn{6}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{6}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{6}{l}{\footnotesize Includes demographic FEs for race and gender.}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}

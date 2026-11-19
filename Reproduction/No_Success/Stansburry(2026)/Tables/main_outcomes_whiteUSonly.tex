@@ -1,0 +1,54 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Main Outcomes: Sample limited to White non-Hispanic US-born \label{tab1}}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+  &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+  &\multicolumn{1}{c}{Tenure}&\multicolumn{1}{c}{R1}&\multicolumn{1}{c}{Log Rank}&\multicolumn{1}{c}{Log Earnings}&\multicolumn{1}{c}{Job Satisfaction}\\
+\hline
+ref: Grad Degree&                     &                     &                     &                     &                     \\
+[1em]
+1: No BA&     -0.0123         &     0.00556         &     -0.0342         &      0.0448\sym{**} &      0.0484         \\
+  &     (0.010)         &    (0.0089)         &     (0.040)         &     (0.020)         &     (0.058)         \\
+[1em]
+2: BA&    -0.00304         &    0.000674         &     -0.0861\sym{*}  &      0.0241         &    -0.00451         \\
+  &     (0.011)         &    (0.0096)         &     (0.044)         &     (0.022)         &     (0.059)         \\
+[1em]
+4: PhD&    -0.00181         &     0.00614         &      0.0211         &      0.0257         &      0.0437         \\
+  &    (0.0095)         &    (0.0079)         &     (0.039)         &     (0.018)         &     (0.048)         \\
+[1em]
+ref: Male&                     &                     &                     &                     &                     \\
+[1em]
+Female&     0.00269         &    -0.00789         &     0.00333         &    -0.00160         &     -0.0648\sym{*}  \\
+  &    (0.0074)         &    (0.0056)         &     (0.029)         &     (0.013)         &     (0.034)         \\
+[1em]
+Survey Year FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Year (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Years Since PhD (5-Year Buckets) FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Field FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+PhD Institution FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+[1em]
+Birth Country FE&         Yes         &         Yes         &         Yes         &         Yes         &         Yes         \\
+\hline
+Dep Var Mean&        0.65         &       0.088         &       -3.42         &        7.11         &       -1.94         \\
+Observations&      25,767         &      17,441         &      17,441         &      13,501         &      16,786         \\
+Clusters&       5,451         &       5,152         &       5,152         &       4,977         &       4,957         \\
+R-Squared&      0.0015         &      0.0025         &      0.0029         &       0.081         &      0.0026         \\
+Adjusted R-Squared&     0.00041         &     0.00094         &      0.0013         &       0.079         &     0.00097         \\
+Controls Degrees of Freedom&           4         &           4         &           4         &           4         &           4         \\
+Absorbed Degrees of Freedom&          25         &          25         &          25         &          25         &          25         \\
+Residual Degrees of Freedom&       5,450         &       5,151         &       5,151         &       4,976         &       4,956         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize Condition: if years\_since\_phd greater than or equal to 10 and years\_since\_phd less than 40 and LFSTAT}\\
+\multicolumn{6}{l}{\footnotesize equals 1 (for Tenure) OR TENURE equals 1 (for all other outcomes) and LOCATIONUS equals 1}\\
+\multicolumn{6}{l}{\footnotesize Fixed Effects: YR PHDFIELDNEW PHDINST PHDCY5y years\_since\_phd5y BIRTHCOUNTRY}\\
+\multicolumn{6}{l}{\footnotesize Standard Error: cluster PHDPROGRAMYR}\\
+\multicolumn{6}{l}{\footnotesize Weighted by WTSURVY.}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<0.01\)}\\
+\end{tabular}
+\end{table}
